@@ -1,0 +1,203 @@
+body {
+  margin: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+      p {
+        word-break: break-all;
+      }
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.3em;
+}
+
+p b {
+  font-weight: 400;
+}
+
+.title {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  margin: 0px;
+  /* THIS CHANGES BACHGROUND IN TITLE */
+  /* NOTICE IT HAS A TRANSPARENCY, CHANGE THE FOURTH NUMBER TO 1 TO MAKE IT SOLID */
+  background-color: rgba(255, 255, 255, 1);
+  letter-spacing: 0.3em;
+  line-height: 60px;
+  text-decoration: none;
+  /* If you dont want it uppercase change this */
+  text-transform: uppercase;
+  /* THIS CHANGES THE COLOR OF THE TITLE ONLY, GO TO .drawer-hamburger-icon TO CHANGE THE COLOR OF THAT ICON */
+  color:rgb(0, 0, 0);
+}
+
+/* Currently unused, could be used if you want clicking title to send to home page */
+.title a {
+  line-height: 60px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Changes padding of the images, could be used for more */
+.floatleft {
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.floatleft-no-padding-top {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.floatright {
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.floatright-no-padding-top {
+  padding-left: 15px;
+  padding-bottom: 20px;
+}
+
+/* Other, container contains the div with the content, content has.. content */
+.container {
+/* if you want a container, delete or comment out height and width */
+  height: 0px;
+  width: 100%
+  padding: 0px 0px;
+  background-color: rgb(240, 240, 240);
+}
+
+.banner img {
+  margin-top: 60px;
+}
+.content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 17%;
+  padding-left: 17%;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  background-color: rgb(255, 255, 255);
+}
+
+.profile {
+  padding-right: 30px;
+  width: 300px;
+  float:left;
+}
+
+.content .name {
+  font-size: 1.3em;
+}
+
+.group-info {
+  padding-bottom: 300px;
+}
+
+.content img {
+  margin-left: 0px;
+
+}
+
+/* This changes your section headers */
+.content h2 {
+  padding-top: 25px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+/* This might center a photo, but I was having some trouble with it. */
+/* You may want to copy what I did for the Whirlpool Galaxy to center something */
+.center {
+  padding-bottom: 60px;
+  padding-top: 30px;
+  margin: 0 auto;
+  display: table;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* changes style of drawer menu item */
+
+/* To change color of the background color of the nav drawer, change background */
+/* color of .drawer-menu-item AND .drawer-nav */
+.drawer-menu-item {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: rgb(40, 40, 40);
+  transition: .3s;
+}
+
+/*This changes the color when a mouse hovers over a drawer-menu-item */
+.drawer-menu-item:hover {
+  background-color: rgb(230, 230, 230);
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.drawer-nav {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Chance the background color to chance NAV BAR ICON color */
+
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+  background-color: rgb(0, 0, 0) !important;
+}
+
+/* Do not change the color from transparent */
+.drawer-open .drawer-hamburger-icon {
+  background-color: transparent !important;
+}
+
+.link a,
+.link a:visited {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(37, 37, 37);
+  transition: .3s;
+}
+
+.link a:hover {
+  font-weight: 400;
+  color: rgb(11, 22, 179);
+}
+
+.link-fancy a,
+.link-fancy a:visited {
+  padding: 7px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(37, 37, 37);
+  border-top: 1px solid rgb(37, 37, 37);
+  border-left: 1px solid rgb(37, 37, 37);
+  border-right: 1px solid rgb(37, 37, 37);
+  transition: .3s;
+}
+
+.link-fancy a:hover {
+  padding: 6px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-top: 1px solid rgb(0, 0, 0);
+  border-left: 1px solid rgb(0, 0, 0);
+  border-right: 1px solid rgb(0, 0, 0);
+  background-color: rgb(235, 235, 235);
