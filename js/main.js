@@ -1,10 +1,9 @@
 $(document).ready(function(){
   // oh no please don't look at this it's so horrible dear god why
   $('.drawer').drawer();
+
   $("#h1").hide();
   $("#h2").hide();
-
-  $("#im1").hide();
 
   $("#p1").hide();
   $("#p2").hide();
@@ -13,8 +12,6 @@ $(document).ready(function(){
   $("#p5").hide();
 
   $("#h1").delay(0).fadeIn(1000);
-
-  $("#im1").delay(1000).fadeIn(1000);
 
   $("#p1").delay(1000).fadeIn(1000);
   $("#p2").delay(1000).fadeIn(1000);
