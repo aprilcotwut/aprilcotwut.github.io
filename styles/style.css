@@ -1,11 +1,36 @@
 body {
   margin: 0px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 @media only screen and (max-width: 768px) {
       p {
         word-break: break-all;
       }
+}
+
+@media only screen and (max-width: 1200px) {
+
+  a.title_bar {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .drawer-menu-item {
+    display: none;
+  }
+  .drawer-open .drawer-hamburger-icon {
+    display: none;
+  }
+  .drawer-nav {
+    display: none;
+  }
+
+  .drawer-toggle {
+    display: none
+  }
 }
 
 p {
@@ -17,16 +42,25 @@ p b {
   font-weight: 400;
 }
 
+h1 {
+  font-weight: 400;
+}
+
 .title {
+  display: inline-flex;
   width: 100%;
   height: 60px;
   position: fixed;
-  text-align: center;
   vertical-align: middle;
-  font-size: 2em;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  align-items: center;
+  font-family: 'Courier New', monospace;
   margin: 0px;
+  font-weight: 500;
+  font-size: 2em;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   /* THIS CHANGES BACHGROUND IN TITLE */
   /* NOTICE IT HAS A TRANSPARENCY, CHANGE THE FOURTH NUMBER TO 1 TO MAKE IT SOLID */
   background-color: rgba(255, 255, 255, 1);
@@ -36,14 +70,81 @@ p b {
   /* If you dont want it uppercase change this */
   text-transform: uppercase;
   /* THIS CHANGES THE COLOR OF THE TITLE ONLY, GO TO .drawer-hamburger-icon TO CHANGE THE COLOR OF THAT ICON */
-  color:rgb(0, 0, 0);
+  color: #4C5760;
+
 }
 
-/* Currently unused, could be used if you want clicking title to send to home page */
-.title a {
+.title_main {
+  float: left;
+  display: inline;
+  right: 15%;
+  color: #3003FF;
+  padding-right: 50px;
+  text-decoration: none;
+  /* empty currently */
+}
+
+.title_bar {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 5px;
+  color: #000000;
+  display:inline;
+  letter-spacing: 0.5em;
+  font-size: 0.5em;
+}
+
+.title_resume {
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  color: #3003FF;
+  display:inline;
+  letter-spacing: 0.5em;
+  font-size: 0.5em;
+}
+
+a.title_bar,
+a:visited.title_bar {
   line-height: 60px;
   text-decoration: none;
-  color: inherit;
+  padding: 7px;
+  text-decoration: none;
+  color: #000000;
+  transition: .3s;
+}
+
+ a:hover.title_bar{
+  color: rgba(0, 0, 0, 0.5);
+
+}
+
+a.title_resume,
+a:visited.resume {
+  line-height: 60px;
+  text-decoration: none;
+  padding: 7px;
+  text-decoration: none;
+  color: #3003FF;
+  transition: .3s;
+  border-radius: 5px;
+  border-color: rgba(48, 3, 255, 1);
+  border-bottom: 1.2px solid #3003FF;
+  border-top: 1.2px solid #3003FF;
+  border-left: 1.2px solid #3003FF;
+  border-right: 1.2px solid #3003FF;
+}
+
+ a:hover.title_resume{
+  color: #3003FF;
+  border-radius: 5px;
+  border-color: rgba(48, 3, 255, 1);
+  border-bottom: 1.2px solid #3003FF;
+  border-top: 1.2px solid #3003FF;
+  border-left: 1.2px solid #3003FF;
+  border-right: 1.2px solid #3003FF;
+  background-color: rgba(48, 3, 255, 0.05);
+
 }
 
 /* Changes padding of the images, could be used for more */
@@ -69,12 +170,21 @@ p b {
 }
 
 /* Other, container contains the div with the content, content has.. content */
+.container_blue {
+/* if you want a container, delete or comment out height and width */
+  height: 100%;
+  width: 100%;
+  padding: 0px 0px;
+  background-color: inherit;
+  /* background-image: radial-gradient(circle at right top,#0623fd 0,#592ee6 70%,#176bc4 100%); */
+}
+
 .container {
 /* if you want a container, delete or comment out height and width */
-  height: 0px;
-  width: 100%
+  height: 100%;
+  width: 100%;
   padding: 0px 0px;
-  background-color: rgb(240, 240, 240);
+  background-color: inherit;
 }
 
 .banner img {
@@ -83,12 +193,23 @@ p b {
 .content {
   padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 17%;
-  padding-left: 17%;
-  font-family: 'Roboto', sans-serif;
+  padding-right: 15%;
+  padding-left: 15%;
+  font-family: 'Courier New', monospace;
   font-weight: 300;
   font-size: 1em;
-  background-color: rgb(255, 255, 255);
+  background-color: inherit;
+}
+
+.content_blog {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 15%;
+  padding-left: 15%;
+  font-family: 'Courier New', monospace;
+  font-weight: 300;
+  font-size: 1em;
+  background-color: inherit;
 }
 
 .profile {
@@ -112,11 +233,25 @@ p b {
 
 /* This changes your section headers */
 .content h2 {
-  padding-top: 25px;
-  padding-bottom: 15px;
-  text-transform: uppercase;
+  padding-top: 50px;
+  padding-bottom: 30px;
   font-weight: 400;
   font-size: 1.5em;
+}
+
+.content_blog h2 {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.content_blog h3 {
+  padding-top: 50px;
+  padding-bottom: 0px;
+  font-weight: 400;
+  font-size: 1em;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /* This might center a photo, but I was having some trouble with it. */
@@ -138,22 +273,22 @@ li {
 /* color of .drawer-menu-item AND .drawer-nav */
 .drawer-menu-item {
   background-color: rgb(255, 255, 255);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Courier New', monospace;
   font-weight: 300;
-  font-size: 1.2em;
-  color: rgb(40, 40, 40);
-  transition: .3s;
+  font-size: 1.5em;
+  color: #3003FF;
+  transition: .5s;
 }
 
 /*This changes the color when a mouse hovers over a drawer-menu-item */
 .drawer-menu-item:hover {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(223, 222, 255);
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #3003FF;
 }
 
 .drawer-nav {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 1)
 }
 
 /* Chance the background color to chance NAV BAR ICON color */
@@ -161,7 +296,17 @@ li {
 .drawer-hamburger-icon,
 .drawer-hamburger-icon:after,
 .drawer-hamburger-icon:before {
-  background-color: rgb(0, 0, 0) !important;
+  margin-left: 6px;
+  background-color: #000000 !important;
+}
+
+.drawer-toggle.drawer-hamburger {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.drawer-hamburger-icon:hover {
+  background-color: #000000 !important;
 }
 
 /* Do not change the color from transparent */
@@ -169,35 +314,34 @@ li {
   background-color: transparent !important;
 }
 
-.link a,
-.link a:visited {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  border-bottom: 2px solid rgb(37, 37, 37);
-  transition: .3s;
+a.in-line-link,
+a:visited.in-line-link {
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Courier New', monospace;
+    font-weight: 300;
+    color: rgba(48, 3, 255);
+    transition: .5s;
 }
 
-.link a:hover {
-  font-weight: 400;
-  color: rgb(11, 22, 179);
+a:hover.in-line-link {
+ color: rgba(48, 3, 255, 0.4);
+
+ }
+
+
+
+a:hover.outside-link {
+ color: rgba(0, 0, 0, 0.5);
+
 }
 
-.link-fancy a,
-.link-fancy a:visited {
-  padding: 7px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  border-bottom: 1px solid rgb(37, 37, 37);
-  border-top: 1px solid rgb(37, 37, 37);
-  border-left: 1px solid rgb(37, 37, 37);
-  border-right: 1px solid rgb(37, 37, 37);
-  transition: .3s;
-}
-
-.link-fancy a:hover {
-  padding: 6px;
-  border-bottom: 1px solid rgb(0, 0, 0);
-  border-top: 1px solid rgb(0, 0, 0);
-  border-left: 1px solid rgb(0, 0, 0);
-  border-right: 1px solid rgb(0, 0, 0);
-  background-color: rgb(235, 235, 235);
+ a.outside-link,
+ a:visited.outside-link {
+     text-decoration: none;
+     background-color: rgb(255, 255, 255);
+     font-family: 'Courier New', monospace;
+     font-weight: 300;
+     color: rgba(0, 0, 0, 0.7);
+     transition: .5s;
+   }
