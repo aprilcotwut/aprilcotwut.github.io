@@ -53,7 +53,7 @@ h1 {
   position: fixed;
   vertical-align: middle;
   align-items: center;
-  font-family: 'Courier New', monospace;
+  font-family: 'Cutive Mono', monospace;
   margin: 0px;
   font-weight: 500;
   font-size: 2em;
@@ -221,7 +221,7 @@ a:visited.resume {
   padding-right: 15%;
   padding-left: 15%;
   margin-left: 30px;
-  font-family: 'Courier New', monospace;
+  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   font-size: 1em;
   background-color: inherit;
@@ -233,7 +233,7 @@ a:visited.resume {
   padding-right: 15%;
   padding-left: 15%;
   margin-left: 30px;
-  font-family: 'Courier New', monospace;
+  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   font-size: 1em;
   background-color: inherit;
@@ -300,7 +300,7 @@ li {
 /* color of .drawer-menu-item AND .drawer-nav */
 .drawer-menu-item {
   background-color: rgb(255, 255, 255);
-  font-family: 'Courier New', monospace;
+  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   font-size: 1.5em;
   color: #3003FF;
@@ -345,7 +345,7 @@ a.title-link,
 a:visited.title-link {
     text-decoration: none;
     background-color: rgb(255, 255, 255);
-    font-family: 'Courier New', monospace;
+    font-family: 'Cutive Mono', monospace;
     font-weight: 500;
     font-size: 2em;
     color: rgba(48, 3, 255);
@@ -361,7 +361,7 @@ a.in-line-link,
 a:visited.in-line-link {
     text-decoration: none;
     background-color: rgb(255, 255, 255);
-    font-family: 'Courier New', monospace;
+    font-family: 'Cutive Mono', monospace;
     font-weight: 300;
     color: rgba(48, 3, 255);
     transition: .5s;
@@ -383,7 +383,7 @@ a:hover.outside-link {
  a:visited.outside-link {
      text-decoration: none;
      background-color: rgb(255, 255, 255);
-     font-family: 'Courier New', monospace;
+     font-family: 'Cutive Mono', monospace;
      font-weight: 300;
      color: rgba(0, 0, 0, 0.7);
      transition: .5s;
