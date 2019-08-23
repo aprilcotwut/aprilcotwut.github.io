@@ -11,8 +11,6 @@
 
     <!-- Style sheets; first is for nav bar, second is custoizable in /styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css.map">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata&display=swap" rel="stylesheet">
@@ -27,24 +25,24 @@
   </head>
   <body class="drawer drawer--left drawer-close" style="overflow:auto;">
     <header>
-      <!-- This is the main title OUTSIDE the banner -->
+      <!-- This is your navbar -->
       <div>
       <nav>
-        <h1 class="title">
+        <h1 class="mytitle">
           <li><a href="index.html" class="title_alt">Home</a></li>
           <li><a href="research.html" class="title_bar">Research</a></li>
           <li><a href="teaching.html" class="title_bar">Teaching</a></li>
           <li><a href="blog.html" class="title_bar">Blog</a></li>
-          <li><a href="docs/resume.pdf" class="title_resume">My Resume</a></li>
+          <li><a href="docs/resume.pdf" class="title_resume">Resume</a></li>
         </h1>
       </nav>
       </div>
-      <!-- This is your navbar -->
+      <!-- This is your navdrawer button? -->
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">togglenavigation</span>
         <span class="drawer-hamburger-icon"></span>
       </button>
-      <!--This is your list for the nav bar -->
+      <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
           <li><a href="index.html" class="drawer-menu-item">HOME</a></li>
@@ -56,10 +54,12 @@
       </nav>
     </header>
 
+    <div class="myspacer"></div>
+
     <!-- This is your content -->
       <main role="main">
-      <div class="container">
-        <div class="content">
+      <div class="mycontainer">
+        <div class="mycontent">
           <!-- Here is where you should start editting -->
           <h2 id="h1">Hey, I'm  <a href="index.html" class="title-link">April Walker.</a></h2>
           <img id="i1" class="profile" src="img/me2.png" alt="Photo of me!" style="float: left; width: 275px">

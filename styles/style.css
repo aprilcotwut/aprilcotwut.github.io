@@ -46,7 +46,13 @@ h1 {
   font-weight: 400;
 }
 
-.title {
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.mytitle {
   display: inline-flex;
   width: 100%;
   height: 60px;
@@ -194,17 +200,7 @@ a:visited.resume {
   padding-bottom: 20px;
 }
 
-/* Other, container contains the div with the content, content has.. content */
-.container_blue {
-/* if you want a container, delete or comment out height and width */
-  height: 100%;
-  width: 100%;
-  padding: 0px 0px;
-  background-color: inherit;
-  /* background-image: radial-gradient(circle at right top,#0623fd 0,#592ee6 70%,#176bc4 100%); */
-}
-
-.container {
+.mycontainer {
 /* if you want a container, delete or comment out height and width */
   height: 100%;
   width: 100%;
@@ -215,8 +211,8 @@ a:visited.resume {
 .banner img {
   margin-top: 60px;
 }
-.content {
-  padding-top: 50px;
+.mycontent {
+  padding-top: 40px;
   padding-bottom: 50px;
   padding-right: 15%;
   padding-left: 15%;
@@ -227,8 +223,8 @@ a:visited.resume {
   background-color: inherit;
 }
 
-.content_blog {
-  padding-top: 50px;
+.mycontent_blog {
+  padding-top: 40px;
   padding-bottom: 50px;
   padding-right: 15%;
   padding-left: 15%;
@@ -237,6 +233,10 @@ a:visited.resume {
   font-weight: 300;
   font-size: 1em;
   background-color: inherit;
+}
+
+.myspacer {
+  height: 50px
 }
 
 .profile {
