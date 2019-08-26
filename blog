@@ -30,7 +30,7 @@
       <div>
       <nav>
         <h1 class="mytitle">
-          <li><a href="index.html" class="title_alt">Home</a></li>
+          <li><a href="/" class="title_alt">Home</a></li>
           <li><a href="research" class="title_bar">Research</a></li>
           <li><a href="teaching" class="title_bar">Teaching</a></li>
           <li><a href="blog" class="title_bar">Blog</a></li>
@@ -46,7 +46,7 @@
       <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
-          <li><a href="index.html" class="drawer-menu-item">HOME</a></li>
+          <li><a href="/" class="drawer-menu-item">HOME</a></li>
           <li><a href="research" class="drawer-menu-item">RESEARCH</a></li>
           <li><a href="teaching" class="drawer-menu-item">TEACHING</a></li>
           <li><a href="blog" class="drawer-menu-item">BLOG</a></li>
