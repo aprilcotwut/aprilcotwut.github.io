@@ -63,6 +63,7 @@
         <div class="mycontent_blog">
           <!-- Here is where you should start editting -->
           <h2>MATH 2554 (Calculus 1) Fa 19</h2>
+          <p><a href="docs/Cal I HW Checklist.pdf" class="in-line-link">HW Checklist (Due 9/6)</a></p>
           <p><a href="docs/2_1_2_3_Review_Sheet.pdf" class="in-line-link">2.1 - 2.3 Review (Back of Aug 29 Handout)</a></p>
           <p><a href="docs/Aug29handout.pdf" class="in-line-link">Aug 29 Handout</a></p>
           <p><a href="docs/2.3NP.pdf" class="in-line-link">2.3 Slides</a></p>
