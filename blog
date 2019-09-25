@@ -61,16 +61,34 @@
     <!-- This is your content -->
       <main role="main">
       <div class="mycontainer">
+        <!-- <div class="mycontent_blog">
+          <h3> Nov 3rd, 2019</h3>
+          <h2>A Gentle Introduction to the Mathematics of Deep Learning (3/5): A Brief Overview of Matrix Algebra</h2>
+        </div>
+
         <div class="mycontent_blog">
-          <!-- Here is where you should start editting -->
+          <h3> Sept 29th, 2019</h3>
+          <h2>A Gentle Introduction to the Mathematics of Deep Learning (2/5): The Heart of Differential Calculus</h2>
+        </div> -->
+
+        <div class="mycontent_blog">
+          <h3> Sept 27th, 2019</h3>
+          <h2>A Gentle Introduction to the Mathematics of Deep Learning (1/5): A Foreword?</h2>
+          <p>Over the next couple weeks I'm going to try to give a very minimal introduction to two of the key mathematical concepts required for understanding a large branch of machine learning algorithms - differential calculus and matrix algebra. After this, I'll have a post wrapping the two together (matrix calculus!) and explaining how these concepts are used in machine learning as a whole, and finally go more specifically go into their use in deep learning algorithms such as neural networks.</p>
+          <br>
+          <p>I hoping more so than strictly providing a minimal introduction to calculus and matrices, I can get across the heart of these subjects so you can develop an appreciation for these fields. These posts will require a high-school introduction to algebra, but hopefully nothing more. Let's hope I'm not biting off a bit more than I can chew with that statement! </p>
+        </div>
+
+        <div class="mycontent_blog">
           <h3>Aug 16th, 2019</h3>
+          <h2>Welcome!</h2>
           <p>Hey friend, thanks for checking out my site.</p>
           <p>There's not much here yet, but I'm hoping this gives me a platform to discuss some more introductory machine learning concepts and possibly tie together some concepts you'll learn in my classes with "real-world" skills. Introductory math and science courses tend to act more like filters and less like siphons. I'm not sure that's the best approach to teaching, personally. I'll probably also discuss and contrast my experiences in academia and industry, and potentially highlight the ways they could learn from each other.</p>
+          <br>
           <p>For now, here's a photo of my two cats Socrates and Kalliope when they were still kittens. They're pretty cool, and they love laying on my laptop, especially when I'm trying to get in a good coding sesh.</p>
           <div class="image">
             <img class="center" src="img/cats1.png" alt="A photo of Kalliope and Socs" align="middle" style="width: 70%">
           </div>
-
         </div>
       </div>
     </main>
