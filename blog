@@ -64,19 +64,22 @@
         <!-- <div class="mycontent_blog">
           <h3> Nov 3rd, 2019</h3>
           <h2>A Gentle Introduction to the Mathematics of Deep Learning (3/5): A Brief Overview of Matrix Algebra</h2>
-        </div>
+        </div> -->
 
-        <div class="mycontent_blog">
-          <h3> Sept 29th, 2019</h3>
+        <!-- <div class="mycontent_blog">
+          <h3> Oct 7th, 2019</h3>
           <h2>A Gentle Introduction to the Mathematics of Deep Learning (2/5): The Heart of Differential Calculus</h2>
+          <p> Let me be frank for a second. Each time I’ve sat down and contemplated how to write this essay, I’ve become immensely disappointed in my ability to truly convey the importance of calculus. Finding myself in the intermediary realm between scientist, engineer, and mathematician, I find the most appreciation for calculus in its sheer utility. Calculus is a tool, but a tool in the same way language is a tool. In the same way, language sets the foundation for practically all human interaction and expression, calculus has set a foundation for mathematics, science, and technological progress. It is practically impossible to exaggerate the value of calculus.</p>
+          <br>
+          <a href="blogs/heart_of_calc.html" class="blog_link">Read On!</a>
         </div> -->
 
         <div class="mycontent_blog">
           <h3> Sept 27th, 2019</h3>
           <h2>A Gentle Introduction to the Mathematics of Deep Learning (1/5): A Foreword?</h2>
-          <p>Over the next couple weeks I'm going to try to give a very minimal introduction to two of the key mathematical concepts required for understanding a large branch of machine learning algorithms - differential calculus and matrix algebra. After this, I'll have a post wrapping the two together (matrix calculus!) and explaining how these concepts are used in machine learning as a whole, and finally go more specifically go into their use in deep learning algorithms such as neural networks.</p>
+          <p>Over the next couple of weeks, I'm going to give a minimal introduction to two of the key mathematical concepts required for understanding a large branch of machine learning algorithms - differential calculus and matrix algebra. After this, I'll have a post wrapping the two together (matrix calculus!) and explaining how these concepts are used in machine learning as a whole. Finally, I'll more specifically go into their use in deep learning algorithms such as neural networks.</p>
           <br>
-          <p>I hoping more so than strictly providing a minimal introduction to calculus and matrices, I can get across the heart of these subjects so you can develop an appreciation for these fields. These posts will require a high-school introduction to algebra, but hopefully nothing more. Let's hope I'm not biting off a bit more than I can chew with that statement! </p>
+          <p>I hoping more so than strictly providing a minimal introduction to calculus and matrices, I can get across the heart of these subjects so you can develop an appreciation for these fields. These posts will require a high-school introduction to algebra, but hopefully nothing more. Let's hope I'm not biting off more than I can chew with that statement!</p>
         </div>
 
         <div class="mycontent_blog">

@@ -120,6 +120,15 @@ h2 {
   font-size: 0.5em;
 }
 
+.blog_link {
+  margin-bottom: 5px;
+  color: #3003FF;
+  display:inline;
+  letter-spacing: 0.5em;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
 a.title_bar,
 a:visited.title_bar {
   line-height: 60px;
@@ -151,7 +160,7 @@ a:visited.title_alt {
 }
 
 a.title_resume,
-a:visited.resume {
+a:visited.title_resume {
   line-height: 60px;
   text-decoration: none;
   padding: 7px;
@@ -167,6 +176,34 @@ a:visited.resume {
 }
 
  a:hover.title_resume{
+  color: #3003FF;
+  border-radius: 5px;
+  border-color: rgba(48, 3, 255, 1);
+  border-bottom: 1.2px solid #3003FF;
+  border-top: 1.2px solid #3003FF;
+  border-left: 1.2px solid #3003FF;
+  border-right: 1.2px solid #3003FF;
+  background-color: rgba(48, 3, 255, 0.05);
+
+}
+
+a.blog_link,
+a:visited.blog_link {
+  line-height: 60px;
+  text-decoration: none;
+  padding: 7px;
+  text-decoration: none;
+  color: #3003FF;
+  transition: .3s;
+  border-radius: 5px;
+  border-color: rgba(48, 3, 255, 1);
+  border-bottom: 1.2px solid #3003FF;
+  border-top: 1.2px solid #3003FF;
+  border-left: 1.2px solid #3003FF;
+  border-right: 1.2px solid #3003FF;
+}
+
+ a:hover.blog_link{
   color: #3003FF;
   border-radius: 5px;
   border-color: rgba(48, 3, 255, 1);
