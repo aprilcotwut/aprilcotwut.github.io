@@ -63,6 +63,7 @@
         <div class="mycontent_blog">
           <!-- Here is where you should start editting -->
           <h2>MATH 2554 (Calculus 1) Fa 19</h2>
+          <p><a href="docs/MidtermPractice.pdf" class="in-line-link">Midterm Practice</a></p>
           <p><a href="docs/3.11NP.pdf" class="in-line-link">3.11 Slides</a></p>
           <p><a href="docs/3.10NP.pdf" class="in-line-link">3.10 Slides</a></p>
           <p><a href="docs/3_9_Review.pdf" class="in-line-link">3.9 Review (Back of Oct 10)</a></p>
