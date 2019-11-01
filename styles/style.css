@@ -39,7 +39,7 @@ p {
 }
 
 p b {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 h1 {
@@ -80,6 +80,8 @@ h2 {
   color: #4C5760;
 
 }
+
+.tab { margin-left: 40px; }
 
 .title_main {
   float: left;
@@ -318,11 +320,19 @@ a:visited.blog_link {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* This might center a photo, but I was having some trouble with it. */
+/* This might be a photo, but I was having some trouble with it. */
 /* You may want to copy what I did for the Whirlpool Galaxy to center something */
 .center {
-  padding-bottom: 60px;
-  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: table;
+}
+
+.center_fig {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  max-width: 550px;
   margin: 0 auto;
   display: table;
 }
