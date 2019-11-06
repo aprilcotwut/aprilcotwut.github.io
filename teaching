@@ -63,9 +63,20 @@
         <div class="mycontent_blog">
           <!-- Here is where you should start editting -->
           <h2>MATH 2554 (Calculus 1) Fa 19</h2>
+          <p><a href="docs/5.2NP.pdf" class="in-line-link">5.2 Slides</a></p>
+          <p><a href="docs/5.1NP.pdf" class="in-line-link">5.1 Slides</a></p>
+          <p><a href="docs/4.9NP.pdf" class="in-line-link">4.9 Slides</a></p>
           <p><a href="docs/4.8NP.pdf" class="in-line-link">4.8 Slides</a></p>
           <p><a href="docs/4.7NP.pdf" class="in-line-link">4.7 Slides</a></p>
+          <p><a href="docs/4.6NP.pdf" class="in-line-link">4.6 Slides</a></p>
+          <p><a href="docs/Nov7handout.pdf" class="in-line-link">Nov 7 Handout</a></p>
+          <p><a href="docs/4.5NP.pdf" class="in-line-link">4.5 Slides</a></p>
+          <p><a href="docs/Nov5handout.pdf" class="in-line-link">Nov 5 Handout</a></p>
+          <p><a href="docs/4.4NP.pdf" class="in-line-link">4.4 Slides</a></p>
+          <p><a href="docs/Oct31handout.pdf" class="in-line-link">Oct 31 Handout</a></p>
           <p><a href="docs/4.3NP.pdf" class="in-line-link">4.3 Slides</a></p>
+          <p><a href="docs/Oct29handout.pdf" class="in-line-link">Oct 29 Handout</a></p>
+          <p><a href="docs/4_1_Review.pdf" class="in-line-link">4.1 Review (Back of Oct 29)</a></p>
           <p><a href="docs/4.2NP.pdf" class="in-line-link">4.2 Slides</a></p>
           <p><a href="docs/4.1NP.pdf" class="in-line-link">4.1 Slides</a></p>
           <p><a href="docs/Oct24handout.pdf" class="in-line-link">Oct 24 Handout</a></p>
