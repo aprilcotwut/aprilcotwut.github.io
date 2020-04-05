@@ -275,14 +275,28 @@ footer {
 
 /* Chance the background color to chance NAV BAR ICON color */
 
+.drawer-hamburger-icon {
+  margin-top: 0;
+}
+
 .drawer-hamburger-icon,
 .drawer-hamburger-icon:after,
 .drawer-hamburger-icon:before {
-  margin-left: 6px;
   background-color: #000000 !important;
 }
 
 .drawer-toggle.drawer-hamburger {
+  left: .5rem;
+  top: .4rem;
+  padding: .5rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* April's TOTALLY INTENTIONAL offset of the hamburger buns from the patty */
+.drawer-close .drawer-toggle .drawer-hamburger-icon::before,
+.drawer-close .drawer-toggle .drawer-hamburger-icon::after {
+  left: 6px;
 }
 
 .drawer-hamburger-icon:hover {
