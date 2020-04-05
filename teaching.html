@@ -11,8 +11,8 @@
 
     <!-- Style sheets; first is for nav bar, second is custoizable in /styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/teaching.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon_alt.ico">
     <!-- Please don't touch this -->
@@ -23,20 +23,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/js/drawer.min.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <body class="drawer drawer--left drawer-close" style="overflow:auto;">
+  <body class="drawer drawer--left drawer-close" style="overflow:auto;" data-page="teaching">
     <header>
       <!-- This is your navbar -->
-      <div>
-      <nav>
-        <h1 class="mytitle">
-          <li><a href="/" class="title_alt">Home</a></li>
-          <li><a href="research" class="title_bar">Research</a></li>
-          <li><a href="teaching" class="title_bar">Teaching</a></li>
-          <li><a href="blog" class="title_bar">Blog</a></li>
-          <li><a href="docs/resume.pdf" class="title_resume">Resume</a></li>
-        </h1>
+      <nav id="top-nav">
+        <div class="wrapper">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="research.html" class="hide-mobile">Research</a></li>
+            <li><a href="teaching.html" class="hide-mobile active">Teaching</a></li>
+            <li><a href="blog.html" class="hide-mobile">Blog</a></li>
+            <li><a href="docs/resume.pdf" id="resume" class="button">Resume</a></li>
+          </ul>
+        </div>
       </nav>
-      </div>
       <!-- This is your navdrawer button? -->
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">togglenavigation</span>
@@ -45,124 +45,128 @@
       <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
-          <li><a href="/" class="drawer-menu-item">HOME</a></li>
-          <li><a href="research" class="drawer-menu-item">RESEARCH</a></li>
-          <li><a href="teaching" class="drawer-menu-item">TEACHING</a></li>
-          <li><a href="blog" class="drawer-menu-item">BLOG</a></li>
-          <li><a href="docs/resume.pdf" class="drawer-menu-item">RESUME</a></li>
+          <li><a href="index.html" class="drawer-menu-item">Home</a></li>
+          <li><a href="research.html" class="drawer-menu-item">Research</a></li>
+          <li><a href="teaching.html" class="drawer-menu-item active">Teaching</a></li>
+          <li><a href="blog.html" class="drawer-menu-item">Blog</a></li>
+          <li><a href="docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="myspacer"></div>
+    <main role="main">
+      <div class="wrapper" id="content">
 
+        <h2>MATH 2554 WEEKLY UPDATE</h2>
+        <ul>
+          <li><a href="docs/4_5_Review.pdf">4.5 Review (Back of Nov 7)</a></li>
+          <li><a href="docs/Nov7handout.pdf">Nov 7 Handout</a></li>
+          <li><a href="docs/4.5NP.pdf">4.5 Slides</a></li>
+          <li><a href="docs/Nov 5th Notes.pdf">Nov 5 Handout ANSWERS</a></li>
+          <li><a href="docs/Nov5handout.pdf">Nov 5 Handout</a></li>
+          <li><a href="docs/4.4NP.pdf">4.4 Slides</a></li>
+          <li><a href="https://www.khanacademy.org/math/calculus-1/cs1-analyzing-functions/cs1-sketching-curves/v/calculus-graphing-with-derivatives-example"> Khan Academy: Curve Sketching (Logarithmic)</a></li>
+          <li><a href="https://www.khanacademy.org/math/calculus-1/cs1-analyzing-functions/cs1-sketching-curves/v/calculus-graphing-using-derivatives"> Khan Academy: Curve Sketching (Polynomial)</a></li>
+          <li><a href="docs/Quiz9.pdf">Quiz 9 - DUE MARCH 31</a></li>
+        </ul>
 
-    <!-- This is your content -->
-      <main role="main">
-      <div class="mycontainer">
-        <div class="mycontent_blog">
-          <!-- Here is where you should start editting -->
-          <h2>MATH 2554 WEEKLY UPDATE</h2>
-          <p><a href="docs/4_5_Review.pdf" class="in-line-link">4.5 Review (Back of Nov 7)</a></p>
-          <p><a href="docs/Nov7handout.pdf" class="in-line-link">Nov 7 Handout</a></p>
-          <p><a href="docs/4.5NP.pdf" class="in-line-link">4.5 Slides</a></p>
-          <p><a href="docs/Nov 5th Notes.pdf" class="in-line-link">Nov 5 Handout ANSWERS</a></p>
-          <p><a href="docs/Nov5handout.pdf" class="in-line-link">Nov 5 Handout</a></p>
-          <p><a href="docs/4.4NP.pdf" class="in-line-link">4.4 Slides</a></p>
-          <p><a href="https://www.khanacademy.org/math/calculus-1/cs1-analyzing-functions/cs1-sketching-curves/v/calculus-graphing-with-derivatives-example" class="in-line-link"> Khan Academy: Curve Sketching (Logarithmic)</a></p>
-          <p><a href="https://www.khanacademy.org/math/calculus-1/cs1-analyzing-functions/cs1-sketching-curves/v/calculus-graphing-using-derivatives" class="in-line-link"> Khan Academy: Curve Sketching (Polynomial)</a></p>
-          <p><a href="docs/Quiz9.pdf" class="in-line-link">Quiz 9 - DUE MARCH 31</a></p>
-          <h2>MATH 2554 Sp 20</h2>
-          <p><a href="docs/Quiz8.pdf" class="in-line-link">Quiz 8</a></p>
-          <p><a href="docs/Quiz9.pdf" class="in-line-link">Quiz 9</a></p>
+        <h2>MATH 2554 Sp 20</h2>
 
-          <h2>MATH 2554 Fa 19</h2>
-          <!-- <p><a href="docs/Dec12handout.pdf" class="in-line-link">Dec 12 Handout</a></p>
-          <p><a href="docs/Dec10handout.pdf" class="in-line-link">Dec 10 Handout</a></p>
-          <p><a href="docs/5.5NP.pdf" class="in-line-link">5.5 Slides</a></p>
-          <p><a href="docs/Dec5handout.pdf" class="in-line-link">Dec 5 Handout</a></p>
-          <p><a href="docs/5.4NP.pdf" class="in-line-link">5.4 Slides</a></p>
-          <p><a href="docs/Dec2handout.pdf" class="in-line-link">Dec 2 Handout</a></p>
-          <p><a href="docs/5.3NP.pdf" class="in-line-link">5.3 Slides</a></p>
-          <p><a href="docs/Nov26handout.pdf" class="in-line-link">Nov 26 Handout</a></p>
-          <p><a href="docs/5.2NP.pdf" class="in-line-link">5.2 Slides</a></p>
-          <p><a href="docs/5.1NP.pdf" class="in-line-link">5.1 Slides</a></p>
-          <p><a href="docs/Nov21handout.pdf" class="in-line-link">Nov 21 Handout</a></p>
-          <p><a href="docs/4.9NP.pdf" class="in-line-link">4.9 Slides</a></p>
-          <p><a href="docs/4.8NP.pdf" class="in-line-link">4.8 Slides</a></p>
-          <p><a href="docs/4_6_4_7_Review.pdf" class="in-line-link">4.6 - 4.7 Review (Back of Nov 12)</a></p>
-          <p><a href="docs/Nov12handout.pdf" class="in-line-link">Nov 12 Handout</a></p>
-          <p><a href="docs/4.7NP.pdf" class="in-line-link">4.7 Slides</a></p>
-          <p><a href="docs/4.6NP.pdf" class="in-line-link">4.6 Slides</a></p> -->
-          <p><a href="docs/4_5_Review.pdf" class="in-line-link">4.5 Review (Back of Nov 7)</a></p>
-          <p><a href="docs/Nov7handout.pdf" class="in-line-link">Nov 7 Handout</a></p>
-          <p><a href="docs/4.5NP.pdf" class="in-line-link">4.5 Slides</a></p>
-          <p><a href="docs/Nov5handout.pdf" class="in-line-link">Nov 5 Handout</a></p>
-          <p><a href="docs/4.4NP.pdf" class="in-line-link">4.4 Slides</a></p>
-          <p><a href="docs/Oct31handout.pdf" class="in-line-link">Oct 31 Handout</a></p>
-          <p><a href="docs/4.3NP.pdf" class="in-line-link">4.3 Slides</a></p>
-          <p><a href="docs/Oct29handout.pdf" class="in-line-link">Oct 29 Handout</a></p>
-          <p><a href="docs/4_1_Review.pdf" class="in-line-link">4.1 Review (Back of Oct 29)</a></p>
-          <p><a href="docs/4.2NP.pdf" class="in-line-link">4.2 Slides</a></p>
-          <p><a href="docs/4.1NP.pdf" class="in-line-link">4.1 Slides</a></p>
-          <p><a href="docs/Oct24handout.pdf" class="in-line-link">Oct 24 Handout</a></p>
-          <p><a href="docs/3_11_Review.pdf" class="in-line-link">3.11 Review (Back of Oct 24)</a></p>
-          <p><a href="docs/3.11NP.pdf" class="in-line-link">3.11 Slides</a></p>
-          <p><a href="docs/MidtermPractice.pdf" class="in-line-link">Midterm Practice</a></p>
-          <p><a href="docs/Oct15handout.pdf" class="in-line-link">Oct 15 Handout</a></p>
-          <p><a href="docs/3.10NP.pdf" class="in-line-link">3.10 Slides</a></p>
-          <p><a href="docs/3_9_Review.pdf" class="in-line-link">3.9 Review (Back of Oct 10)</a></p>
-          <p><a href="docs/Oct10handout.pdf" class="in-line-link">Oct 10 Handout</a></p>
-          <p><a href="docs/3.9NP.pdf" class="in-line-link">3.9 Slides</a></p>
-          <p><a href="docs/3_7_3_8_Review.pdf" class="in-line-link">3.7 - 3.8 Review (Back of Oct 8)</a></p>
-          <p><a href="docs/Oct08handout.pdf" class="in-line-link">Oct 8 Handout</a></p>
-          <p><a href="docs/3.8NP.pdf" class="in-line-link">3.8 Slides</a></p>
-          <p><a href="docs/3.7NP.pdf" class="in-line-link">3.7 Slides</a></p>
-          <p><a href="docs/3_4_3_6_Review.pdf" class="in-line-link">3.4 - 3.6 Review (Back of Oct 3)</a></p>
-          <p><a href="docs/Oct03handout.pdf" class="in-line-link">Oct 3 Handout</a></p>
-          <p><a href="docs/3.6NP.pdf" class="in-line-link">3.6 Slides</a></p>
-          <p><a href="docs/exam_PoMo.pdf" class="in-line-link">Post Exam Self Analysis</a></p>
-          <p><a href="docs/3.5NP.pdf" class="in-line-link">3.5 Slides</a></p>
-          <p><a href="docs/3.4NP.pdf" class="in-line-link">3.4 Slides</a></p>
-          <p><a href="docs/3_2_3_3_Review.pdf" class="in-line-link">3.2 - 3.3 Review (Back of Sept 26)</a></p>
-          <p><a href="docs/Sep26handout.pdf" class="in-line-link">Sept 26 Handout</a></p>
-          <p><a href="docs/3.3NP.pdf" class="in-line-link">3.3 Slides</a></p>
-          <p><a href="docs/Exam1Practice.pdf" class="in-line-link">Exam 1 Practice</a></p>
-          <p><a href="docs/Exam_1_Fa_19_Review.pdf" class="in-line-link">Exam 1 Review (Back of Sept 19)</a></p>
-          <p><a href="docs/Sep19handout.pdf" class="in-line-link">Sept 19 Handout</a></p>
-          <p><a href="docs/3.2NP.pdf" class="in-line-link">3.2 Slides</a></p>
-          <p><a href="docs/2_6_3_1_Review_Sheet.pdf" class="in-line-link">2.6 - 3.1 Review (Back of Sept 17)</a></p>
-          <p><a href="docs/Sep17handout.pdf" class="in-line-link">Sept 17 Handout</a></p>
-          <p><a href="docs/3.1NP.pdf" class="in-line-link">3.1 Slides</a></p>
-          <p><a href="docs/2.7NP.pdf" class="in-line-link">2.7 Slides</a></p>
-          <p><a href="docs/2_6_Review_Sheet.pdf" class="in-line-link">2.6 Review (Back of Sept 12)</a></p>
-          <p><a href="docs/Sep12handout.pdf" class="in-line-link">Sept 12 Handout</a></p>
-          <p><a href="docs/2.6NP.pdf" class="in-line-link">2.6 Slides</a></p>
-          <p><a href="docs/2_4_2_5_Review_Sheet.pdf" class="in-line-link">2.4 - 2.5 Review (Back of Sept 10)</a></p>
-          <p><a href="docs/Sep10handout.pdf" class="in-line-link">Sept 10 Handout</a></p>
-          <p><a href="docs/2.5NP.pdf" class="in-line-link">2.5 Slides</a></p>
-          <p><a href="docs/Sep5handout.pdf" class="in-line-link">Sept 5 Handout</a></p>
-          <p><a href="docs/2.4NP.pdf" class="in-line-link">2.4 Slides</a></p>
-          <p><a href="docs/2_3_Review_Sheet.pdf" class="in-line-link">2.3 Review (Back of Sept 3)</a></p>
-          <p><a href="docs/Sep3handout.pdf" class="in-line-link">Sept 3 Handout</a></p>
-          <p><a href="docs/Cal I HW Checklist.pdf" class="in-line-link">HW Checklist (Due 9/6)</a></p>
-          <p><a href="docs/2_1_2_3_Review_Sheet.pdf" class="in-line-link">2.1 - 2.3 Review (Back of Aug 29)</a></p>
-          <p><a href="docs/Aug29handout.pdf" class="in-line-link">Aug 29 Handout</a></p>
-          <p><a href="docs/2.3NP.pdf" class="in-line-link">2.3 Slides</a></p>
-          <p><a href="docs/2.2NP.pdf" class="in-line-link">2.2 Slides</a></p>
-          <p><a href="docs/FirstDay_Worksheet2.pdf" class="in-line-link">First Day Worksheet</a></p>
-          <p><a href="docs/2.1NP.pdf" class="in-line-link">2.1 Slides</a></p>
-          <p><a href="docs/MATH2554_HelpGuide.pdf" class="in-line-link">My Help Guide</a></p>
-          <p><a href="docs/2554F19_RaichSyllabus.pdf" class="in-line-link">Syllabus</a></p>
-          <p><a href="docs/What to do if you have issues with MLP.pdf" class="in-line-link">What to do if you have issues with MLP</a></p>
-          <div class="myspacer"></div>
-          <h2>MATH 2554 Fa 18 - Sp 19</h2>
-          <p><a href="docs/MATH2554_FinalReview.pdf" class="in-line-link">Final Review</a></p>
-          <p><a href="docs/MATH2554_MidtermReview.pdf" class="in-line-link">Midterm Review</a></p>
-          <p><a href="docs/MATH2554_Exam1Review.pdf" class="in-line-link">Exam 1 Review</a></p>
+        <ul>
+          <li><a href="docs/Quiz8.pdf">Quiz 8</a></li>
+          <li><a href="docs/Quiz9.pdf">Quiz 9</a></li>
+        </ul>
 
+        <h2>MATH 2554 Fa 19</h2>
+        <ul>
+          <!--
+            <li><a href="docs/Dec12handout.pdf">Dec 12 Handout</a></li>
+            <li><a href="docs/Dec10handout.pdf">Dec 10 Handout</a></li>
+            <li><a href="docs/5.5NP.pdf">5.5 Slides</a></li>
+            <li><a href="docs/Dec5handout.pdf">Dec 5 Handout</a></li>
+            <li><a href="docs/5.4NP.pdf">5.4 Slides</a></li>
+            <li><a href="docs/Dec2handout.pdf">Dec 2 Handout</a></li>
+            <li><a href="docs/5.3NP.pdf">5.3 Slides</a></li>
+            <li><a href="docs/Nov26handout.pdf">Nov 26 Handout</a></li>
+            <li><a href="docs/5.2NP.pdf">5.2 Slides</a></li>
+            <li><a href="docs/5.1NP.pdf">5.1 Slides</a></li>
+            <li><a href="docs/Nov21handout.pdf">Nov 21 Handout</a></li>
+            <li><a href="docs/4.9NP.pdf">4.9 Slides</a></li>
+            <li><a href="docs/4.8NP.pdf">4.8 Slides</a></li>
+            <li><a href="docs/4_6_4_7_Review.pdf">4.6 - 4.7 Review (Back of Nov 12)</a></li>
+            <li><a href="docs/Nov12handout.pdf">Nov 12 Handout</a></li>
+            <li><a href="docs/4.7NP.pdf">4.7 Slides</a></li>
+            <li><a href="docs/4.6NP.pdf">4.6 Slides</a></li>
+          -->
+          <li><a href="docs/4_5_Review.pdf">4.5 Review (Back of Nov 7)</a></li>
+          <li><a href="docs/Nov7handout.pdf">Nov 7 Handout</a></li>
+          <li><a href="docs/4.5NP.pdf">4.5 Slides</a></li>
+          <li><a href="docs/Nov5handout.pdf">Nov 5 Handout</a></li>
+          <li><a href="docs/4.4NP.pdf">4.4 Slides</a></li>
+          <li><a href="docs/Oct31handout.pdf">Oct 31 Handout</a></li>
+          <li><a href="docs/4.3NP.pdf">4.3 Slides</a></li>
+          <li><a href="docs/Oct29handout.pdf">Oct 29 Handout</a></li>
+          <li><a href="docs/4_1_Review.pdf">4.1 Review (Back of Oct 29)</a></li>
+          <li><a href="docs/4.2NP.pdf">4.2 Slides</a></li>
+          <li><a href="docs/4.1NP.pdf">4.1 Slides</a></li>
+          <li><a href="docs/Oct24handout.pdf">Oct 24 Handout</a></li>
+          <li><a href="docs/3_11_Review.pdf">3.11 Review (Back of Oct 24)</a></li>
+          <li><a href="docs/3.11NP.pdf">3.11 Slides</a></li>
+          <li><a href="docs/MidtermPractice.pdf">Midterm Practice</a></li>
+          <li><a href="docs/Oct15handout.pdf">Oct 15 Handout</a></li>
+          <li><a href="docs/3.10NP.pdf">3.10 Slides</a></li>
+          <li><a href="docs/3_9_Review.pdf">3.9 Review (Back of Oct 10)</a></li>
+          <li><a href="docs/Oct10handout.pdf">Oct 10 Handout</a></li>
+          <li><a href="docs/3.9NP.pdf">3.9 Slides</a></li>
+          <li><a href="docs/3_7_3_8_Review.pdf">3.7 - 3.8 Review (Back of Oct 8)</a></li>
+          <li><a href="docs/Oct08handout.pdf">Oct 8 Handout</a></li>
+          <li><a href="docs/3.8NP.pdf">3.8 Slides</a></li>
+          <li><a href="docs/3.7NP.pdf">3.7 Slides</a></li>
+          <li><a href="docs/3_4_3_6_Review.pdf">3.4 - 3.6 Review (Back of Oct 3)</a></li>
+          <li><a href="docs/Oct03handout.pdf">Oct 3 Handout</a></li>
+          <li><a href="docs/3.6NP.pdf">3.6 Slides</a></li>
+          <li><a href="docs/exam_PoMo.pdf">Post Exam Self Analysis</a></li>
+          <li><a href="docs/3.5NP.pdf">3.5 Slides</a></li>
+          <li><a href="docs/3.4NP.pdf">3.4 Slides</a></li>
+          <li><a href="docs/3_2_3_3_Review.pdf">3.2 - 3.3 Review (Back of Sept 26)</a></li>
+          <li><a href="docs/Sep26handout.pdf">Sept 26 Handout</a></li>
+          <li><a href="docs/3.3NP.pdf">3.3 Slides</a></li>
+          <li><a href="docs/Exam1Practice.pdf">Exam 1 Practice</a></li>
+          <li><a href="docs/Exam_1_Fa_19_Review.pdf">Exam 1 Review (Back of Sept 19)</a></li>
+          <li><a href="docs/Sep19handout.pdf">Sept 19 Handout</a></li>
+          <li><a href="docs/3.2NP.pdf">3.2 Slides</a></li>
+          <li><a href="docs/2_6_3_1_Review_Sheet.pdf">2.6 - 3.1 Review (Back of Sept 17)</a></li>
+          <li><a href="docs/Sep17handout.pdf">Sept 17 Handout</a></li>
+          <li><a href="docs/3.1NP.pdf">3.1 Slides</a></li>
+          <li><a href="docs/2.7NP.pdf">2.7 Slides</a></li>
+          <li><a href="docs/2_6_Review_Sheet.pdf">2.6 Review (Back of Sept 12)</a></li>
+          <li><a href="docs/Sep12handout.pdf">Sept 12 Handout</a></li>
+          <li><a href="docs/2.6NP.pdf">2.6 Slides</a></li>
+          <li><a href="docs/2_4_2_5_Review_Sheet.pdf">2.4 - 2.5 Review (Back of Sept 10)</a></li>
+          <li><a href="docs/Sep10handout.pdf">Sept 10 Handout</a></li>
+          <li><a href="docs/2.5NP.pdf">2.5 Slides</a></li>
+          <li><a href="docs/Sep5handout.pdf">Sept 5 Handout</a></li>
+          <li><a href="docs/2.4NP.pdf">2.4 Slides</a></li>
+          <li><a href="docs/2_3_Review_Sheet.pdf">2.3 Review (Back of Sept 3)</a></li>
+          <li><a href="docs/Sep3handout.pdf">Sept 3 Handout</a></li>
+          <li><a href="docs/Cal I HW Checklist.pdf">HW Checklist (Due 9/6)</a></li>
+          <li><a href="docs/2_1_2_3_Review_Sheet.pdf">2.1 - 2.3 Review (Back of Aug 29)</a></li>
+          <li><a href="docs/Aug29handout.pdf">Aug 29 Handout</a></li>
+          <li><a href="docs/2.3NP.pdf">2.3 Slides</a></li>
+          <li><a href="docs/2.2NP.pdf">2.2 Slides</a></li>
+          <li><a href="docs/FirstDay_Worksheet2.pdf">First Day Worksheet</a></li>
+          <li><a href="docs/2.1NP.pdf">2.1 Slides</a></li>
+          <li><a href="docs/MATH2554_HelpGuide.pdf">My Help Guide</a></li>
+          <li><a href="docs/2554F19_RaichSyllabus.pdf">Syllabus</a></li>
+          <li><a href="docs/What to do if you have issues with MLP.pdf">What to do if you have issues with MLP</a></li>
+        </ul>
 
-        </div>
+        <h2>MATH 2554 Fa 18 - Sp 19</h2>
+        <ul>
+          <li><a href="docs/MATH2554_FinalReview.pdf">Final Review</a></li>
+          <li><a href="docs/MATH2554_MidtermReview.pdf">Midterm Review</a></li>
+          <li><a href="docs/MATH2554_Exam1Review.pdf">Exam 1 Review</a></li>
+        </ul>
       </div>
     </main>
   </body>

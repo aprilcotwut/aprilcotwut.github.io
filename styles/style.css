@@ -1,23 +1,145 @@
-body {
-  margin: 0px;
-  background-color: rgba(255, 255, 255, 1);
+/* extra small devices (phones) */
+:root {
+  --header-top-margin: 5rem;
+  --spacer: 2.5rem;
+  --spacer-lg: 4rem;
+  --spacer-sm: 1.5rem;
+  --spacer-xs: .75rem;
+  --wrapper-width: 100%;
+  --text-size: .9rem;
+  --text-size-sm: .8rem;
 }
 
-@media only screen and (max-width: 768px) {
-  p {
-    word-break: break-all;
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  :root {
+    --wrapper-width: 33rem;
+    --text-size: .95rem;
+    --text-size-sm: .85rem;
   }
 }
 
-@media only screen and (max-width: 1200px) {
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  :root {
+    --wrapper-width: 40rem;
+    --text-size: 1rem;
+    --text-size-sm: .9rem;
+  }
+}
 
-  a.title_bar {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  :root {
+    --wrapper-width: 60rem;
+    --text-size: 1.1rem;
+    --text-size-sm: .95rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  :root {
+    --wrapper-width: 80rem;
+    --text-size: 1.2rem;
+    --text-size-sm: 1rem;
+  }
+}
+
+/* COMPONENTS */
+
+/* LAYOUT */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 1);
+  font-size: var(--text-size);
+  font-family: 'Cutive Mono', monospace;
+}
+
+header nav a {
+  text-transform: uppercase;
+}
+
+#top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* This puts the nav above MathJax items */
+  background-color: rgb(255, 255, 255);
+}
+#top-nav ul {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  height: 3.5rem;
+  width: 100%;
+  vertical-align: middle;
+  align-items: center;
+  font-weight: 500;
+  font-size: 2em;
+  line-height: .9rem;
+  text-decoration: none;
+  /* THIS CHANGES THE COLOR OF THE TITLE ONLY, GO TO .drawer-hamburger-icon TO CHANGE THE COLOR OF THAT ICON */
+  color: #4C5760;
+  list-style-type: none;
+}
+#top-nav a,
+#top-nav a:visited {
+  text-decoration: none;
+  padding: var(--spacer-xs);
+  color: #000000;
+  transition: .3s;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+}
+#top-nav a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+#top-nav a.active {
+  border-image:
+    linear-gradient(to right, white 10%, #eee 30%, #eee 70%, white 90%)
+    0 0 1 /                    /* slice */
+    0 0 1px 0 /    /* width */
+    0 /* outset */
+    round;                  /* repeat */
+}
+
+#top-nav #resume {
+  margin-left: .5rem;
+}
+
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--spacer-sm);
+  width: 100%;
+  max-width: var(--wrapper-width);
+}
+
+#content {
+  margin-top: var(--spacer-lg);
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  font-weight: 300;
+}
+
+/* ELEMENTS */
+
+@media (max-width: 767px) {
+  #top-nav ul {
+    justify-content: right;
+  }
+  .hide-mobile {
     display: none;
   }
-
 }
 
-@media only screen and (min-width: 1200px) {
+@media (min-width: 768px) {
   .drawer-menu-item {
     display: none;
   }
@@ -27,7 +149,6 @@ body {
   .drawer-nav {
     display: none;
   }
-
   .drawer-toggle {
     display: none
   }
@@ -35,289 +156,40 @@ body {
 
 p {
   line-height: 1.5;
-  font-size: 1.3em;
 }
 
-p b {
+strong {
   font-weight: 700;
 }
 
-h1 {
-  font-weight: 400;
-}
-
-h2 {
-  display: block;
-  font-size: 1.5em;
+h1, h2, h3, h4, h5, h6 {
+  margin-top: var(--header-top-margin);
+  margin-bottom: var(--spacer-sm);
   font-weight: bold;
+  line-height: 1.5;
 }
 
-.mytitle {
-  display: inline-flex;
-  width: 100%;
-  height: 60px;
-  position: fixed;
-  vertical-align: middle;
-  align-items: center;
-  font-family: 'Cutive Mono', monospace;
-  margin: 0px;
-  font-weight: 500;
-  font-size: 2em;
-  padding-right: 15%;
-  margin-left: 30px;
-  padding-left: 15%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /* THIS CHANGES BACHGROUND IN TITLE */
-  /* NOTICE IT HAS A TRANSPARENCY, CHANGE THE FOURTH NUMBER TO 1 TO MAKE IT SOLID */
-  background-color: rgba(255, 255, 255, 1);
-  letter-spacing: 0.3em;
-  line-height: 60px;
+/*h1 { font-size: ; }*/
+h2 { font-size: 1.5rem; }
+/*h3 { font-size: ; }*/
+/*h4 { font-size: ; }*/
+/*h5 { font-size: ; }*/
+/*h6 { font-size: ; }*/
+
+a.button {
+  display: inline-block;
+  padding: .5rem;
+  border-radius: .25rem;
+  border: 1.2px solid #3003FF;
+}
+a.button,
+a.button:visited {
   text-decoration: none;
-  /* If you dont want it uppercase change this */
-  text-transform: uppercase;
-  /* THIS CHANGES THE COLOR OF THE TITLE ONLY, GO TO .drawer-hamburger-icon TO CHANGE THE COLOR OF THAT ICON */
-  color: #4C5760;
-
-}
-
-.tab { margin-left: 40px; }
-
-.title_main {
-  float: left;
-  display: inline;
-  right: 15%;
-  color: #3003FF;
-  padding-right: 50px;
-  text-decoration: none;
-  /* empty currently */
-}
-
-.title_bar {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 5px;
-  color: #000000;
-  display:inline;
-  letter-spacing: 0.5em;
-  font-size: 0.5em;
-}
-
-.title_alt {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 5px;
-  margin-right: 10px;
-  color: #000000;
-  display:inline;
-  letter-spacing: 0.5em;
-  font-size: 0.5em;
-}
-
-.title_resume {
-  margin-bottom: 5px;
-  color: #3003FF;
-  display:inline;
-  letter-spacing: 0.5em;
-  font-size: 0.5em;
-}
-
-.blog_link {
-  margin-bottom: 5px;
-  color: #3003FF;
-  display:inline;
-  letter-spacing: 0.5em;
-  font-size: 1em;
-  text-transform: uppercase;
-}
-
-a.title_bar,
-a:visited.title_bar {
-  line-height: 60px;
-  text-decoration: none;
-  padding: 7px;
-  text-decoration: none;
-  color: #000000;
+  color: #3003FF !important;
   transition: .3s;
 }
-
-a:hover.title_bar{
-  color: rgba(0, 0, 0, 0.5);
-
-}
-
-a.title_alt,
-a:visited.title_alt {
-  line-height: 60px;
-  text-decoration: none;
-  padding: 7px;
-  text-decoration: none;
-  color: #000000;
-  transition: .3s;
-}
-
-a:hover.title_alt{
-  color: rgba(0, 0, 0, 0.5);
-
-}
-
-a.title_resume,
-a:visited.title_resume {
-  line-height: 60px;
-  text-decoration: none;
-  padding: 7px;
-  text-decoration: none;
-  color: #3003FF;
-  transition: .3s;
-  border-radius: 5px;
-  border-color: rgba(48, 3, 255, 1);
-  border-bottom: 1.2px solid #3003FF;
-  border-top: 1.2px solid #3003FF;
-  border-left: 1.2px solid #3003FF;
-  border-right: 1.2px solid #3003FF;
-}
-
-a:hover.title_resume{
-  color: #3003FF;
-  border-radius: 5px;
-  border-color: rgba(48, 3, 255, 1);
-  border-bottom: 1.2px solid #3003FF;
-  border-top: 1.2px solid #3003FF;
-  border-left: 1.2px solid #3003FF;
-  border-right: 1.2px solid #3003FF;
+a.button:hover {
   background-color: rgba(48, 3, 255, 0.05);
-
-}
-
-a.blog_link,
-a:visited.blog_link {
-  line-height: 60px;
-  text-decoration: none;
-  padding: 7px;
-  text-decoration: none;
-  color: #3003FF;
-  transition: .3s;
-  border-radius: 5px;
-  border-color: rgba(48, 3, 255, 1);
-  border-bottom: 1.2px solid #3003FF;
-  border-top: 1.2px solid #3003FF;
-  border-left: 1.2px solid #3003FF;
-  border-right: 1.2px solid #3003FF;
-}
-
-a:hover.blog_link{
-  color: #3003FF;
-  border-radius: 5px;
-  border-color: rgba(48, 3, 255, 1);
-  border-bottom: 1.2px solid #3003FF;
-  border-top: 1.2px solid #3003FF;
-  border-left: 1.2px solid #3003FF;
-  border-right: 1.2px solid #3003FF;
-  background-color: rgba(48, 3, 255, 0.05);
-
-}
-
-/* Changes padding of the images, could be used for more */
-.floatleft {
-  padding-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.floatleft-no-padding-top {
-  padding-right: 20px;
-  padding-bottom: 20px;
-}
-
-.floatright {
-  padding-left: 15px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-.floatright-no-padding-top {
-  padding-left: 15px;
-  padding-bottom: 20px;
-}
-
-.mycontainer {
-  /* if you want a container, delete or comment out height and width */
-  height: 100%;
-  width: 100%;
-  padding: 0px 0px;
-  background-color: inherit;
-}
-
-.banner img {
-  margin-top: 60px;
-}
-.mycontent {
-  padding-top: 40px;
-  padding-bottom: 50px;
-  padding-right: 15%;
-  padding-left: 15%;
-  margin-left: 30px;
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 300;
-  font-size: 1em;
-  background-color: inherit;
-}
-
-.mycontent_blog {
-  padding-top: 40px;
-  padding-bottom: 50px;
-  padding-right: 15%;
-  padding-left: 15%;
-  margin-left: 30px;
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 300;
-  font-size: 1em;
-  background-color: inherit;
-}
-
-.myspacer {
-  height: 50px
-}
-
-.profile {
-  padding-right: 30px;
-  width: 300px;
-  float:left;
-}
-
-.content .name {
-  font-size: 1.3em;
-}
-
-.group-info {
-  padding-bottom: 300px;
-}
-
-.content img {
-  margin-left: 0px;
-
-}
-
-/* This changes your section headers */
-.content h2 {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  font-weight: 400;
-  font-size: 1.5em;
-}
-
-.content_blog h2 {
-  padding-top: 50px;
-  padding-bottom: 10px;
-  font-weight: 400;
-  font-size: 1.5em;
-}
-
-.content_blog h3 {
-  padding-top: 50px;
-  padding-bottom: 0px;
-  font-weight: 400;
-  font-size: 1em;
-  color: rgba(0, 0, 0, 0.5);
 }
 
 /* This might be a photo, but I was having some trouble with it. */
@@ -338,7 +210,6 @@ a:hover.blog_link{
 }
 
 li {
-  list-style-type: none;
 }
 
 /* changes style of drawer menu item */
@@ -347,7 +218,6 @@ li {
 /* color of .drawer-menu-item AND .drawer-nav */
 .drawer-menu-item {
   background-color: rgb(255, 255, 255);
-  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   font-size: 1.5em;
   color: #3003FF;
@@ -375,8 +245,6 @@ li {
 }
 
 .drawer-toggle.drawer-hamburger {
-  margin-left: 15px;
-  margin-right: 15px;
 }
 
 .drawer-hamburger-icon:hover {
@@ -388,50 +256,44 @@ li {
   background-color: transparent !important;
 }
 
-a.title-link,
-a:visited.title-link {
-  text-decoration: none;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Cutive Mono', monospace;
-  font-weight: 500;
-  font-size: 2em;
-  color: rgba(48, 3, 255);
-  transition: .5s;
-}
-
 a:hover.title {
   color: rgba(48, 3, 255, 0.4);
 
 }
 
-a.in-line-link,
-a:visited.in-line-link {
+a,
+a:visited {
   text-decoration: none;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   color: rgba(48, 3, 255);
   transition: .5s;
 }
-
-a:hover.in-line-link {
+a:hover {
   color: rgba(48, 3, 255, 0.4);
-
 }
 
-
-
-a:hover.outside-link {
-  color: rgba(0, 0, 0, 0.5);
-
-}
-
-a.outside-link,
-a:visited.outside-link {
+a.external,
+a.external:visited {
   text-decoration: none;
-  background-color: rgb(255, 255, 255);
-  font-family: 'Cutive Mono', monospace;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.7);
   transition: .5s;
+}
+a.external:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+hr {
+  background-color: #f5f5f5;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+footer {
+  margin-top: var(--spacer);
+  padding-top: var(--spacer);
+  border-top: 2px solid #eeeeee;
+  font-size: var(--text-size-sm);
 }
