@@ -50,7 +50,16 @@
 
 /* LAYOUT */
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing */
 * { box-sizing: border-box; }
+
+html {
+  /* This forces a scrollbar on index.html, so the scrollbar is present before all the content fades in,
+   * and the scrollbar won't appear during fade-in and cause the page width the shrink slightly when
+   * the scrollbar is added. Also makes the scrollbar remain in place when the sidebar nav is popped out.*/
+  overflow-y: scroll;
+}
+
 
 body {
   margin: 0;
