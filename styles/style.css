@@ -1,3 +1,5 @@
+/* VARIABLES */
+
 /* extra small devices (phones) */
 :root {
   --header-top-margin: 5rem;
@@ -46,8 +48,6 @@
   }
 }
 
-/* COMPONENTS */
-
 /* LAYOUT */
 
 * { box-sizing: border-box; }
@@ -59,9 +59,22 @@ body {
   font-family: 'Cutive Mono', monospace;
 }
 
-header nav a {
-  text-transform: uppercase;
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--spacer-sm);
+  width: 100%;
+  max-width: var(--wrapper-width);
 }
+
+#content {
+  margin-top: var(--spacer-lg);
+  padding-top: var(--spacer);
+  padding-bottom: var(--spacer);
+  font-weight: 300;
+}
+
+/* NAV */
 
 #top-nav {
   position: fixed;
@@ -108,27 +121,13 @@ header nav a {
     round;                  /* repeat */
 }
 
+header nav a {
+  text-transform: uppercase;
+}
+
 #top-nav #resume {
   margin-left: .5rem;
 }
-
-
-.wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 var(--spacer-sm);
-  width: 100%;
-  max-width: var(--wrapper-width);
-}
-
-#content {
-  margin-top: var(--spacer-lg);
-  padding-top: var(--spacer);
-  padding-bottom: var(--spacer);
-  font-weight: 300;
-}
-
-/* ELEMENTS */
 
 @media (max-width: 767px) {
   #top-nav ul {
@@ -139,20 +138,7 @@ header nav a {
   }
 }
 
-@media (min-width: 768px) {
-  .drawer-menu-item {
-    display: none;
-  }
-  .drawer-open .drawer-hamburger-icon {
-    display: none;
-  }
-  .drawer-nav {
-    display: none;
-  }
-  .drawer-toggle {
-    display: none
-  }
-}
+/* ELEMENTS */
 
 p {
   line-height: 1.5;
@@ -176,6 +162,28 @@ h2 { font-size: 1.5rem; }
 /*h5 { font-size: ; }*/
 /*h6 { font-size: ; }*/
 
+a,
+a:visited {
+  text-decoration: none;
+  font-weight: 300;
+  color: rgba(48, 3, 255);
+  transition: .5s;
+}
+a:hover {
+  color: rgba(48, 3, 255, 0.4);
+}
+
+a.external,
+a.external:visited {
+  text-decoration: none;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.7);
+  transition: .5s;
+}
+a.external:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
 a.button {
   display: inline-block;
   padding: .5rem;
@@ -191,6 +199,23 @@ a.button:visited {
 a.button:hover {
   background-color: rgba(48, 3, 255, 0.05);
 }
+
+hr {
+  background-color: #f5f5f5;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+footer {
+  margin-top: var(--spacer);
+  padding-top: var(--spacer);
+  border-top: 2px solid #eeeeee;
+  font-size: var(--text-size-sm);
+}
+
+/* HELPERS */
 
 /* This might be a photo, but I was having some trouble with it. */
 /* You may want to copy what I did for the Whirlpool Galaxy to center something */
@@ -209,10 +234,7 @@ a.button:hover {
   display: table;
 }
 
-li {
-}
-
-/* changes style of drawer menu item */
+/* DRAWER */
 
 /* To change color of the background color of the nav drawer, change background */
 /* color of .drawer-menu-item AND .drawer-nav */
@@ -256,44 +278,17 @@ li {
   background-color: transparent !important;
 }
 
-a:hover.title {
-  color: rgba(48, 3, 255, 0.4);
-
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  font-weight: 300;
-  color: rgba(48, 3, 255);
-  transition: .5s;
-}
-a:hover {
-  color: rgba(48, 3, 255, 0.4);
-}
-
-a.external,
-a.external:visited {
-  text-decoration: none;
-  font-weight: 300;
-  color: rgba(0, 0, 0, 0.7);
-  transition: .5s;
-}
-a.external:hover {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-hr {
-  background-color: #f5f5f5;
-  border: none;
-  display: block;
-  height: 2px;
-  margin: 1.5rem 0;
-}
-
-footer {
-  margin-top: var(--spacer);
-  padding-top: var(--spacer);
-  border-top: 2px solid #eeeeee;
-  font-size: var(--text-size-sm);
+@media (min-width: 768px) {
+  .drawer-menu-item {
+    display: none;
+  }
+  .drawer-open .drawer-hamburger-icon {
+    display: none;
+  }
+  .drawer-nav {
+    display: none;
+  }
+  .drawer-toggle {
+    display: none
+  }
 }
