@@ -69,9 +69,13 @@ body {
 
 #content {
   margin-top: var(--spacer-lg);
-  padding-top: var(--spacer);
+  padding-top: var(--spacer-sm);
   padding-bottom: var(--spacer);
   font-weight: 300;
+}
+
+#content > :first-child {
+  margin-top: var(--spacer-sm);
 }
 
 /* NAV */
