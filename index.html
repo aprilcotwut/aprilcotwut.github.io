@@ -11,8 +11,8 @@
 
     <!-- Style sheets; first is for nav bar, second is custoizable in /styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon_alt.ico">
     <!-- Please don't touch this -->
@@ -26,17 +26,17 @@
   <body class="drawer drawer--left drawer-close" style="overflow:auto;">
     <header>
       <!-- This is your navbar -->
-      <div>
-      <nav>
-        <h1 class="mytitle">
-          <li><a href="/" class="title_alt">Home</a></li>
-          <li><a href="research" class="title_bar">Research</a></li>
-          <li><a href="teaching" class="title_bar">Teaching</a></li>
-          <li><a href="blog" class="title_bar">Blog</a></li>
-          <li><a href="docs/resume.pdf" class="title_resume">Resume</a></li>
-        </h1>
+      <nav id="top-nav">
+        <div class="wrapper">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="research.html" class="hide-mobile">Research</a></li>
+            <li><a href="teaching.html" class="hide-mobile">Teaching</a></li>
+            <li><a href="blog.html" class="hide-mobile">Blog</a></li>
+            <li><a href="docs/resume.pdf" id="resume" class="button">Resume</a></li>
+          </ul>
+        </div>
       </nav>
-      </div>
       <!-- This is your navdrawer button? -->
       <button type="button" class="drawer-toggle drawer-hamburger">
         <span class="sr-only">togglenavigation</span>
@@ -45,37 +45,29 @@
       <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
-          <li><a href="/" class="drawer-menu-item">HOME</a></li>
-          <li><a href="research" class="drawer-menu-item">RESEARCH</a></li>
-          <li><a href="teaching" class="drawer-menu-item">TEACHING</a></li>
-          <li><a href="blog" class="drawer-menu-item">BLOG</a></li>
-          <li><a href="docs/resume.pdf" class="drawer-menu-item">RESUME</a></li>
+          <li><a href="index.html" class="drawer-menu-item active">Home</a></li>
+          <li><a href="research.html" class="drawer-menu-item">Research</a></li>
+          <li><a href="teaching.html" class="drawer-menu-item">Teaching</a></li>
+          <li><a href="blog.html" class="drawer-menu-item">Blog</a></li>
+          <li><a href="docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
         </ul>
       </nav>
     </header>
 
-    <div class="myspacer"></div>
-
     <!-- This is your content -->
-      <main role="main">
-      <div class="mycontainer">
-        <div class="mycontent">
-          <!-- Here is where you should start editting -->
-          <h2 id="h1">Hey, I'm  <a href="index.html" class="title-link">April Walker.</a></h2>
-          <img id="i1" class="profile" src="img/me.png" alt="Photo of me!" style="float: left; width: 275px">
-          <p id="p1">I'm currently a graduate student and teaching assistant at the University of Arkansas pursuing my M.S in Statistics and Analytics. I'm a scientist at heart who has a passion for statistical inference, machine learning, and software development. I will be finishing up my degree in the spring of 2020, and hopefully moving on to a career at a company whose ideals fit my own! While I have a wide breath of experience in data science, my current personal interests have involved natural language processing.</p>
-          <br>
-          <p id="p2">In addition to my teaching and coursework, I'm also involved in a research project with Dr. Linyin Cheng using Bayesian inference and extreme value theory to determine if urbanization is impacting the intensity and frequency of heat waves. You can find out more about that on my <a href="research" class="in-line-link">research</a> page. I'll also go a bit more into depth about my previous astrophysics research studying x-ray binaries under Dr. Bret Lehmer. While I moved on to focus on research more relevant to my current coursework, I still try to stay involved in astronomy outreach through our on campus club S.P.A.C.E. Hogs. If you're student here interested in joining, checkout their <a href="https://www.facebook.com/SpaceHogs" class="outside-link">facebook</a> page or <a href="mailto: spacehog@uark.edu" class="outside-link">email</a> us!</p>
-          <br>
-          <p id="p3">If you're enrolled in one of my classes, or otherwise interested in what I've taught at my university, feel free to jump over to my <a href="teaching" class="in-line-link">teaching</a> page.</p>
-          <br>
-          <p id="p4">Lastly, if you're interested in machine learning, python, R, cats, or my general thought process feel free to check out my <a href="blog" class="in-line-link">blog</a>. Warning: there's a non-zero chance it'll be one Kaggle competition and 500 photos of my two cats...</p>
-          <div class="myspacer"></div>
-          <h2 id="h2"><a href="mailto: adw027@uark.edu" class="in-line-link">Let's get in touch.</a></h2>
-          <p id="p5">If you're stuck on a calculus assignment, interested in how I got involved in data science, or just want some top notch Fayetteville food recs - feel free to reach out to me. You can also shoot me a <a href="tel: 5012049276" class="in-line-link">text</a> or message me on <a href="https://www.linkedin.com/in/april-walker-88a296165/" class="in-line-link">Linkedin</a>.</p>
-
-
-        </div>
+    <main role="main" id="index">
+      <div class="wrapper" id="content">
+        <!-- Here is where you should start editting -->
+        <h1>
+          <img src="img/me.png" alt="Photo of me!">
+          <div id="hi">Hey, I'm<br><a href="index.html">April Walker.</a></div>
+        </h1>
+        <p>I'm currently a graduate student and teaching assistant at the University of Arkansas pursuing my M.S in Statistics and Analytics. I'm a scientist at heart who has a passion for statistical inference, machine learning, and software development. I will be finishing up my degree in the spring of 2020, and hopefully moving on to a career at a company whose ideals fit my own! While I have a wide breadth of experience in data science, my current personal interests have involved natural language processing.</p>
+        <p>In addition to my teaching and coursework, I'm also involved in a research project with Dr. Linyin Cheng using Bayesian inference and extreme value theory to determine if urbanization is impacting the intensity and frequency of heat waves. You can find out more about that on my <a href="research.html">research</a> page. I'll also go a bit more into depth about my previous astrophysics research studying x-ray binaries under Dr. Bret Lehmer. While I moved on to focus on research more relevant to my current coursework, I still try to stay involved in astronomy outreach through our on campus club S.P.A.C.E. Hogs. If you're student here interested in joining, checkout their <a href="https://www.facebook.com/SpaceHogs" class="external">Facebook</a> page or <a href="mailto: spacehog@uark.edu" class="external">email</a> us!</p>
+        <p>If you're enrolled in one of my classes, or otherwise interested in what I've taught at my university, feel free to jump over to my <a href="teaching.html">teaching</a> page.</p>
+        <p>Lastly, if you're interested in machine learning, python, R, cats, or my general thought process feel free to check out my <a href="blog.html">blog</a>. Warning: there's a non-zero chance it'll be one Kaggle competition and 500 photos of my two cats...</p>
+        <h2><a href="mailto: adw027@uark.edu">Let's get in touch.</a></h2>
+        <p>If you're stuck on a calculus assignment, interested in how I got involved in data science, or just want some top notch Fayetteville food recs - feel free to reach out to me. You can also shoot me a <a href="tel: 5012049276">text</a> or message me on <a href="https://www.linkedin.com/in/april-walker-88a296165/" class="external">Linkedin</a>.</p>
       </div>
     </main>
   </body>

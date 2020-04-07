@@ -1,0 +1,41 @@
+/* extra small devices (phones) */
+
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+h1 > img {
+  flex-basis: 100%;
+}
+h1 img {
+  height: auto;
+  order: 2;
+  max-width: 18rem;
+}
+h1 #hi {
+  line-height: 1;
+  margin: 0;
+  order: 1
+}
+
+h1 a,
+h1 a:visited {
+  font-weight: 500;
+  font-size: 2em;
+  transition: .5s;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    flex-wrap: nowrap;
+  }
+  h1 img {
+    flex-basis: initial;
+    order: 1
+  }
+  h1 #hi {
+    order: 2;
+    margin: var(--spacer);
+  }
+}

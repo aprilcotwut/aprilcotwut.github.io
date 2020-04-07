@@ -4,26 +4,11 @@ $(document).ready(function(){
 
   $("#i1").hide();
 
-  $("#h1").hide();
-  $("#h2").hide();
+  $('#index h1').hide();
+  $('#index h2').hide();
+  $('#index p').hide();
 
-  $("#p1").hide();
-  $("#p2").hide();
-  $("#p3").hide();
-  $("#p4").hide();
-  $("#p5").hide();
-
-  $("#h1").delay(0).fadeIn(1000);
-
-  $("#i1").delay(1000).fadeIn(1000);
-
-  $("#p1").delay(1000).fadeIn(1000);
-  $("#p2").delay(1000).fadeIn(1000);
-  $("#p3").delay(1000).fadeIn(1000);
-  $("#p4").delay(1000).fadeIn(1000);
-
-  $("#h2").delay(2000).fadeIn(1000);
-  $("#p5").delay(2000).fadeIn(1000);
-
-
+  $("#index h1").delay(0).fadeIn(1000);
+  $("#index h2").delay(1000).fadeIn(1000);
+  $("#index p").delay(1000).fadeIn(1000);
 });
