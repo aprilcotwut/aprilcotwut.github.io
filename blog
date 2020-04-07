@@ -29,10 +29,10 @@
       <nav id="top-nav">
         <div class="wrapper">
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="research.html" class="hide-mobile">Research</a></li>
-            <li><a href="teaching.html" class="hide-mobile">Teaching</a></li>
-            <li><a href="blog.html" class="hide-mobile active">Blog</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="research" class="hide-mobile">Research</a></li>
+            <li><a href="teaching" class="hide-mobile">Teaching</a></li>
+            <li><a href="blog" class="hide-mobile active">Blog</a></li>
             <li><a href="docs/resume.pdf" id="resume" class="button">Resume</a></li>
           </ul>
         </div>
@@ -45,10 +45,10 @@
       <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
-          <li><a href="index.html" class="drawer-menu-item">Home</a></li>
-          <li><a href="research.html" class="drawer-menu-item">Research</a></li>
-          <li><a href="teaching.html" class="drawer-menu-item">Teaching</a></li>
-          <li><a href="blog.html" class="drawer-menu-item active">Blog</a></li>
+          <li><a href="/" class="drawer-menu-item">Home</a></li>
+          <li><a href="research" class="drawer-menu-item">Research</a></li>
+          <li><a href="teaching" class="drawer-menu-item">Teaching</a></li>
+          <li><a href="blog" class="drawer-menu-item active">Blog</a></li>
           <li><a href="docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
         </ul>
       </nav>
