@@ -100,7 +100,7 @@ body {
 #top-nav ul {
   display: inline-flex;
   margin: 0;
-  padding: 0;
+  padding-left: 1.5rem;
   height: 3.5rem;
   width: 100%;
   vertical-align: middle;
