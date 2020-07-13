@@ -235,7 +235,7 @@ footer {
 .center {
   margin-bottom: var(--spacer);
   margin-top: var(--spacer);
-  max-width: 50rem;
+  max-width: 60rem;
   width: 100%;
   margin: 0 auto;
   display: table;
