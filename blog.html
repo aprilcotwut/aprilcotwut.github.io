@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- This will be the title you see on the tab bar -->
+    <title>April Walker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Special fonts you can use -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Style sheets; first is for nav bar, second is custoizable in /styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/blog.css">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="img/favicon_alt.ico">
+    <!-- Please don't touch this -->
+    <!-- These make the nav bar work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/js/drawer.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  <body class="drawer drawer--left drawer-close" style="overflow:auto;">
+    <header>
+      <!-- This is your navbar -->
+      <nav id="top-nav">
+        <div class="wrapper">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="research" class="hide-mobile">Research</a></li>
+            <!-- <li><a href="random" class="hide-mobile">Random</a></li> -->
+            <li><a href="blog" class="hide-mobile active">Blog</a></li>
+            <li><a href="docs/resume.pdf" id="resume" class="button">Resume</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- This is your navdrawer button? -->
+      <button type="button" class="drawer-toggle drawer-hamburger">
+        <span class="sr-only">togglenavigation</span>
+        <span class="drawer-hamburger-icon"></span>
+      </button>
+      <!--This is your list for the nav drawer -->
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu">
+          <li><a href="/" class="drawer-menu-item">Home</a></li>
+          <li><a href="research" class="drawer-menu-item">Research</a></li>
+          <!-- <li><a href="random" class="drawer-menu-item">Random</a></li> -->
+          <li><a href="blog" class="drawer-menu-item active">Blog</a></li>
+          <li><a href="docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- This is your content -->
+    <main role="main">
+      <div class="wrapper" id="content">
+
+        <section>
+          <!-- <time datetime="2020-7-12">July 12st, 2020</time> -->
+          <h2>Snake Game</h2>
+          <p>You chomp chomp delicious purple pixels to grow longer, what more could you want from a game?</p>
+          <a href="blogs/snake.html" class="button">Play!</a>
+        </section>
+
+        <section>
+          <!-- <time datetime="2020-7-12">July 12st, 2020</time> -->
+          <h2>Exploring NLP with Game of Thrones: Social Networks</h2>
+          <p>For this project, I wanted to explore the interactions between characters in the Game of Thrones Universe. Over the course of the show, relationships between characters change - friends become foes and aquaintances grow to form alliances. My goal for this project was to pick up on the changes in these relationships by using Social Network Analysis (SNA).</p>
+          <img class="center" src="img/social_nx_ex1.png" alt="The resulting social network graph is shown" align="middle">
+          <a href="blogs/game_of_thrones_social_network_nlp.html" class="button">Read On!</a>
+        </section>
+
+        <section>
+          <!-- <time datetime="2019-10-31">Oct 31st, 2019</time> -->
+          <h2>A Gentle Introduction to the Mathematics of Deep Learning: Functions and the Basis of Differential Calculus</h2>
+          <p> This is my third semester teaching differential calculus at the University of Arkansas, and if I'm being frank, I'm always extra disappointed in my ability to truly convey the importance of calculus. Finding myself in the intermediary realm between scientist, software engineer, and mathematician, I find the most appreciation for calculus in its sheer utility. Calculus is a tool, but a tool in the same way language is a tool. Just as language sets the foundation for practically all human interaction and expression, calculus has set a foundation for mathematical, scientific, and technological progress. It is practically impossible to exaggerate the value of calculus.</p>
+          <p> Budding engineers and scientists are usually tossed into introductory calculus and bombarded with rules and notation. Generally, a student’s first calculus course can be summarized as dreadful rote memorization in an attempt to stay afloat. While this blog post may not help you ace your calculus final, I'm hoping it does help you understand the value of learning calculus and provide you with the fundamentals for understanding machine learning concepts.</p>
+          <a href="blogs/intro_to_calc_1.html" class="button">Read On!</a>
+        </section>
+
+        <section>
+          <!-- <time datetime="2019-09-27">Aug 16th, 2019</time> -->
+          <h2>Welcome!</h2>
+          <p>Hey friend, thanks for checking out my site.</p>
+          <p>I'm hoping this blog gives me a platform to discuss some more introductory machine learning concepts and possibly tie together some concepts you'll learn in undergraduate STEM classes with "real-world" skills. Introductory math and science courses tend to act more like filters and less like siphons. I'm not sure that's the best approach to teaching, personally. I'm hoping I can get you to look past the monotony, and give you a better picture of the beauty of it all.</p>
+          <p> Maybe...</p>
+          <p>If not, well -- here's a photo of my two cats Socrates and Kalliope when they were still kittens. They're pretty cool, and they love laying on my laptop, especially when I'm trying to get in a good coding sesh.</p>
+          <img class="center" src="img/cats1.png" alt="A photo of Kalliope and Socs" align="middle">
+        </section>
+      </div>
+      </div>
+    </main>
+  </body>
+</html>
