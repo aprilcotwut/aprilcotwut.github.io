@@ -139,7 +139,7 @@ function move_event() {
   snake.body.forEach((block) => {
     var x = block[0];
     var y = block[1];
-    if (x > WIDTH || x < 0 || y >= HEIGHT || y < 0) {
+    if (x >= WIDTH || x < 0 || y >= HEIGHT || y < 0) {
       alive = false;
     }
     ctx.beginPath();
