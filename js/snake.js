@@ -1,15 +1,16 @@
 const c = document.getElementById("snakeWindow");
-const ctx = c.getContext("2d")
+const ctx = c.getContext("2d");
 
-const WIDTH = c.width
-const HEIGHT = c.height
+const WIDTH = c.width;
+const HEIGHT = c.height;
 
-const BACKGROUND_COLOR = "#EEEBFF"
-const SNAKE_COLOR = "#3003F3"
-const FOOD_COLOR = "#C503FF"
+const BACKGROUND_COLOR = "#DCD6FF";
+const SNAKE_COLOR = "#3003FE";
+const FOOD_COLOR = "#C503FF";
+const HIT_COLOR = "#FF0022";
 
-const SNAKE_SIZE = 20
-const SNAKE_SPEED = 50
+const SNAKE_SIZE = 20;
+const SNAKE_SPEED = 50;
 
 class Food {
   constructor(object = None) {
@@ -45,6 +46,7 @@ class Snake {
   constructor(rect) {
     this.body = [rect];
     this.dead = false;
+    this.score = 0;
   }
 
   move(pos, food) {
@@ -62,6 +64,10 @@ class Snake {
 
     this.body.forEach((block) => {
       if (block.every((val, i) => val === new_head[i])) {
+        console.log(block);
+        console.log(new_head);
+        this.hit_x = snake.body[0][0];
+        this.hit_y = snake.body[0][1];
         this.dead = true;
       }
     });
@@ -70,8 +76,9 @@ class Snake {
 
     if (food.pos.every((val, i) => val === new_head[i])) {
       food.eaten = true;
+      snake.score ++;
     } else {
-      this.body.pop()
+      this.old_tail = this.body.pop();
     }
   }
 }
@@ -83,6 +90,11 @@ var food = new Food(snake.body);
 var dx = 0;
 var dy = 0;
 
+// var last_dx = -1;
+// var last_dy = -1;
+
+let update_count = 0;
+
 function event_handler() {
   window.onkeydown = function (e) {
     var key = e.which || e.keyCode || 0;
@@ -91,18 +103,22 @@ function event_handler() {
         e.preventDefault();
     }
 
-    if (key === 39 && dx != -SNAKE_SIZE) {
+    if (key === 39 && dx != -SNAKE_SIZE && update_count < 1) {
       dx = SNAKE_SIZE;
       dy = 0;
-    } else if (key === 37 && dx != SNAKE_SIZE) {
+      update_count++;
+    } else if (key === 37 && dx != SNAKE_SIZE  && update_count < 1) {
       dx = -SNAKE_SIZE;
       dy = 0;
-    } else if (key === 38 && dy != SNAKE_SIZE) {
+      update_count++;
+    } else if (key === 38 && dy != SNAKE_SIZE && update_count < 1) {
       dx = 0;
       dy = -SNAKE_SIZE;
-    } else if (key === 40 && dy != -SNAKE_SIZE) {
+      update_count++;
+    } else if (key === 40 && dy != -SNAKE_SIZE && update_count < 1) {
       dx = 0;
       dy = SNAKE_SIZE;
+      update_count++;
     }
   }
 }
@@ -119,10 +135,16 @@ function game_over() {
   ctx.textAlign = "center";
   ctx.font = "bold 3rem Monospace";
   ctx.fillText("You Died :(", WIDTH/2, HEIGHT/3);
+  ctx.fillText("Score: " + snake.score, WIDTH/2, HEIGHT/2.5);
 }
 
 function move_event() {
+  update_count = 0;
   var alive = true;
+
+  ctx.beginPath();
+  ctx.fillStyle = BACKGROUND_COLOR;
+  ctx.fillRect(0, 0, c.height, c.width);
 
   ctx.beginPath();
   ctx.fillStyle = BACKGROUND_COLOR;
@@ -132,7 +154,12 @@ function move_event() {
   var new_move = [dx, dy, SNAKE_SIZE, SNAKE_SIZE];
   snake.move(new_move, food);
 
+  var hit_x = -1;
+  var hit_y = -1;
+
   if (snake.dead) {
+    hit_x = snake.hit_x;
+    hit_y = snake.hit_y;
     alive = false;
   }
 
@@ -140,12 +167,37 @@ function move_event() {
     var x = block[0];
     var y = block[1];
     if (x >= WIDTH || x < 0 || y >= HEIGHT || y < 0) {
+      if ((x >= WIDTH || x < 0) && (y < HEIGHT && y >= 0)) {
+        hit_x = Math.round(x/WIDTH) * (WIDTH - SNAKE_SIZE);
+        hit_y = y;
+      } else if ((y >= WIDTH || y < 0) && (x < HEIGHT && x >= 0)) {
+        hit_y = Math.round(y/HEIGHT) * (HEIGHT - SNAKE_SIZE);
+        hit_x = x;
+      } else {
+        hit_x = Math.round(x/WIDTH) * (WIDTH - SNAKE_SIZE);
+        hit_y = Math.round(y/HEIGHT) * (HEIGHT - SNAKE_SIZE);
+      }
       alive = false;
+      snake.dead = true;
     }
+  });
+
+  snake.body.forEach((block) => {
     ctx.beginPath();
     ctx.fillStyle = SNAKE_COLOR;
     ctx.fillRect(block[0], block[1], block[2], block[3]);
   });
+
+  if (snake.dead) {
+    // Fill in old tail
+    ctx.beginPath();
+    ctx.fillStyle = SNAKE_COLOR;
+    ctx.fillRect(snake.old_tail[0], snake.old_tail[1], SNAKE_SIZE, SNAKE_SIZE);
+    // Fill in head in different color
+    ctx.beginPath();
+    ctx.fillStyle = HIT_COLOR;
+    ctx.fillRect(hit_x, hit_y, SNAKE_SIZE, SNAKE_SIZE);
+  }
 
   ctx.beginPath();
   ctx.fillStyle = FOOD_COLOR;
@@ -156,7 +208,13 @@ function move_event() {
   }
 
   if (!alive) {
-    game_over()
+    console.log(snake.old_tail)
+    console.log(snake.body);
+    console.log("dy");
+    console.log(dy);
+    console.log("dx");
+    console.log(dx);
+    game_over();
     return;
   }
 }

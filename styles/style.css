@@ -244,7 +244,7 @@ footer {
 .center_game {
   margin-top: var(--spacer);
   margin-bottom: var(--spacer);
-  max-width: min(60rem, 85%);
+  max-width: min(50rem, 50%);
   height: calc(width);
   margin: 0 auto;
   display: table;
