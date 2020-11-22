@@ -11,7 +11,7 @@ h1 > img {
 h1 img {
   height: auto;
   order: 2;
-  max-width: 18rem;
+  max-width: 14rem;
 }
 h1 #hi {
   line-height: 1;
