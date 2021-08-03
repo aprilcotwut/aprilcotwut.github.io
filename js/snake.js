@@ -90,9 +90,6 @@ var food = new Food(snake.body);
 var dx = 0;
 var dy = 0;
 
-// var last_dx = -1;
-// var last_dy = -1;
-
 let update_count = 0;
 
 function event_handler() {

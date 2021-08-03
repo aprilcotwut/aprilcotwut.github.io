@@ -62,6 +62,7 @@
           <!-- <time datetime="2020-7-12">July 12st, 2020</time> -->
           <h2>Snake Game</h2>
           <p>You chomp chomp delicious purple pixels to grow longer, what more could you want from a game?</p>
+          <img class="center_small" src="img/snake.png" alt="This is an image example of the snake game you can play if you click the below button" align="middle">
           <a href="blogs/snake.html" class="button">Play!</a>
         </section>
 

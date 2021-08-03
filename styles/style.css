@@ -10,6 +10,11 @@
   --wrapper-width: 100%;
   --text-size: .9rem;
   --text-size-sm: .8rem;
+  /* colors */
+  --champagne-pink: rgb(242, 223, 215);
+  --magnolia: rgb(254, 249, 255);
+  --thistle: rgb(212, 193, 236);
+  --max-blue-puprple: rgb(159, 159, 237);
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -64,6 +69,7 @@ html {
 body {
   margin: 0;
   background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0);
   font-size: var(--text-size);
   font-family: 'Cutive Mono', monospace;
 }
@@ -179,11 +185,11 @@ a,
 a:visited {
   text-decoration: none;
   font-weight: 300;
-  color: rgba(48, 3, 255);
+  color: rgba(48, 3, 254);
   transition: .5s;
 }
 a:hover {
-  color: rgba(48, 3, 255, 0.4);
+  color: rgba(48, 3, 254, 0.4);
 }
 
 a.external,
@@ -210,7 +216,7 @@ a.button:visited {
   transition: .3s;
 }
 a.button:hover {
-  background-color: rgba(48, 3, 255, 0.05);
+  background-color: rgba(48, 3, 254, 0.05);
 }
 
 hr {
@@ -237,6 +243,15 @@ footer {
   margin-top: var(--spacer);
   max-width: 60rem;
   width: 100%;
+  margin: 0 auto;
+  display: table;
+}
+
+.center_small {
+  padding: 1rem;
+  margin-bottom: var(--spacer);
+  margin-top: var(--spacer);
+  max-width: min(35rem, 50%);
   margin: 0 auto;
   display: table;
 }
