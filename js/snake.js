@@ -93,31 +93,84 @@ var dy = 0;
 let update_count = 0;
 
 function event_handler() {
+  function handleTouch(e) {
+    if(e.touches) {
+      var br = c.getBoundingClientRect();
+
+      // our relative location should follow the snake
+      x_rel_snake = br.left + (br.right - br.left) / c.width * snake.body[0][0]
+      y_rel_snake = br.top + (br.bottom - br.top) / c.height * snake.body[0][1]
+
+      var x_rel_loc = (e.touches[0].pageX - x_rel_snake) / (br.right - br.left);
+      var y_rel_loc = (e.touches[0].pageY - y_rel_snake) / (br.bottom - br.top);
+
+      // ignore ambiguous touches
+      if (Math.abs(x_rel_loc / y_rel_loc) < 0.95 || Math.abs(y_rel_loc / x_rel_loc) < 0.95) {
+          e.preventDefault();
+      } else {
+          return
+      }
+
+      var quadrant
+      if (Math.abs(x_rel_loc / y_rel_loc) > 1 && x_rel_loc > 0) {
+        quadrant = "right";
+      } else if (Math.abs(x_rel_loc / y_rel_loc) > 1 && x_rel_loc < 0) {
+        quadrant =  "left";
+      } else if (Math.abs(x_rel_loc / y_rel_loc) < 1 && y_rel_loc < 0) {
+        quadrant = "up";
+      } else {
+        quadrant = "down";
+      }
+      console.log(snake.body[0]);
+      console.log(quadrant);
+      if (quadrant === "right" && dx != -SNAKE_SIZE && update_count < 1) {
+        dx = SNAKE_SIZE;
+        dy = 0;
+        update_count++;
+      } else if (quadrant === "left" && dx != SNAKE_SIZE  && update_count < 1) {
+        dx = -SNAKE_SIZE;
+        dy = 0;
+        update_count++;
+      } else if (quadrant === "up" && dy != SNAKE_SIZE && update_count < 1) {
+        dx = 0;
+        dy = -SNAKE_SIZE;
+        update_count++;
+      } else if (quadrant === "down" && dy != -SNAKE_SIZE && update_count < 1) {
+        dx = 0;
+        dy = SNAKE_SIZE;
+        update_count++;
+      }
+    }
+  }
   window.onkeydown = function (e) {
     var key = e.which || e.keyCode || 0;
 
-    if([32, 37, 38, 39, 40].indexOf(key) > -1) {
+    var valid_keys = [32, 37, 38, 39, 40, 68, 65, 87, 83];
+
+    if(valid_keys.indexOf(key) > -1) {
         e.preventDefault();
     }
 
-    if (key === 39 && dx != -SNAKE_SIZE && update_count < 1) {
+    if ([39, 68].indexOf(key) > -1 && dx != -SNAKE_SIZE && update_count < 1) {
       dx = SNAKE_SIZE;
       dy = 0;
       update_count++;
-    } else if (key === 37 && dx != SNAKE_SIZE  && update_count < 1) {
+    } else if ([37, 65].indexOf(key) > -1 && dx != SNAKE_SIZE  && update_count < 1) {
       dx = -SNAKE_SIZE;
       dy = 0;
       update_count++;
-    } else if (key === 38 && dy != SNAKE_SIZE && update_count < 1) {
+    } else if ([38, 87].indexOf(key) > -1 && dy != SNAKE_SIZE && update_count < 1) {
       dx = 0;
       dy = -SNAKE_SIZE;
       update_count++;
-    } else if (key === 40 && dy != -SNAKE_SIZE && update_count < 1) {
+    } else if ([40, 83].indexOf(key) > -1 && dy != -SNAKE_SIZE && update_count < 1) {
       dx = 0;
       dy = SNAKE_SIZE;
       update_count++;
     }
   }
+  window.addEventListener("touchstart", handleTouch, {passive: false});
+  window.addEventListener("touchmove", handleTouch, {passive: false});
 }
 
 event_handler();
