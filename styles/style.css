@@ -234,6 +234,12 @@ footer {
   font-size: var(--text-size-sm);
 }
 
+/* Other */
+
+#big_list {
+  font-size: 1.5rem;
+}
+
 /* HELPERS */
 
 /* This might be a photo, but I was having some trouble with it. */

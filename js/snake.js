@@ -177,15 +177,9 @@ event_handler();
 var interval = setInterval(move_event, SNAKE_SPEED);
 
 function game_over() {
+  alert(`You died :( Your score is ${snake.score}.`);
   clearInterval(interval);
-  // ctx.beginPath();
-  // ctx.fillStyle = BACKGROUND_COLOR;
-  // ctx.fillRect(0, 0, c.height, c.width);
-  ctx.textStyle = SNAKE_COLOR;
-  ctx.textAlign = "center";
-  ctx.font = "bold 3rem Monospace";
-  ctx.fillText("You Died :(", WIDTH/2, HEIGHT/3);
-  ctx.fillText("Score: " + snake.score, WIDTH/2, HEIGHT/2.5);
+  location.reload();
 }
 
 function move_event() {
@@ -199,6 +193,11 @@ function move_event() {
   ctx.beginPath();
   ctx.fillStyle = BACKGROUND_COLOR;
   ctx.fillRect(0, 0, c.height, c.width);
+
+  // Draw the score
+  ctx.fillStyle = "black";
+  ctx.font = "1rem Monospace";
+  ctx.fillText(`Score: ${snake.score}`, 10, 30);
 
 
   var new_move = [dx, dy, SNAKE_SIZE, SNAKE_SIZE];

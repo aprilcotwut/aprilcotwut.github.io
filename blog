@@ -59,7 +59,14 @@
       <div class="wrapper" id="content">
 
         <section>
-          <!-- <time datetime="2020-7-12">July 12st, 2020</time> -->
+          <!-- <time datetime="2023-2-23">Feb 23rd, 2023</time> -->
+          <h2>Flappy Apes Game</h2>
+          <p>Avoid the blue blocks by clicking to jump and try to get as high a score as you can! Made w/ ChatGPT.</p>
+          <a href="blogs/flappy_apes.html" class="button">Play!</a>
+        </section>
+
+        <section>
+          <!-- <time datetime="2020-12-01">Dec 1st, 2020</time> -->
           <h2>Snake Game</h2>
           <p>You chomp chomp delicious purple pixels to grow longer, what more could you want from a game?</p>
           <img class="center_small" src="img/snake.png" alt="This is an image example of the snake game you can play if you click the below button" align="middle">
