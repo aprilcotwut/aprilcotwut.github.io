@@ -11,17 +11,19 @@
 
     <!-- Style sheets; first is for nav bar, second is custoizable in /styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/css/drawer.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <link rel="stylesheet" type="text/css" href="styles/blog.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog.css">
     <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Inconsolata&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="img/favicon_alt.ico">
+    <link rel="shortcut icon" type="image/png" href="../img/favicon_alt.ico">
     <!-- Please don't touch this -->
     <!-- These make the nav bar work -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.0/js/drawer.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   </head>
   <body class="drawer drawer--left drawer-close" style="overflow:auto;">
     <header>
@@ -29,11 +31,11 @@
       <nav id="top-nav">
         <div class="wrapper">
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="research" class="hide-mobile">Research</a></li>
-            <!-- <li><a href="random" class="hide-mobile">Random</a></li> -->
-            <li><a href="blog" class="hide-mobile active">Blog</a></li>
-            <li><a href="docs/resume.pdf" id="resume" class="button">Resume</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../research" class="hide-mobile">Research</a></li>
+            <!-- <li><a href="../random" class="hide-mobile">Random</a></li> -->
+            <li><a href="../blog" class="hide-mobile active">Blog</a></li>
+            <li><a href="../docs/resume.pdf" id="resume" class="button">Resume</a></li>
           </ul>
         </div>
       </nav>
@@ -45,11 +47,11 @@
       <!--This is your list for the nav drawer -->
       <nav class="drawer-nav" role="navigation">
         <ul class="drawer-menu">
-          <li><a href="/" class="drawer-menu-item">Home</a></li>
-          <li><a href="research" class="drawer-menu-item">Research</a></li>
-          <!-- <li><a href="random" class="drawer-menu-item">Random</a></li> -->
-          <li><a href="blog" class="drawer-menu-item active">Blog</a></li>
-          <li><a href="docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
+          <li><a href="../index.html" class="drawer-menu-item">Home</a></li>
+          <li><a href="../research" class="drawer-menu-item">Research</a></li>
+          <!-- <li><a href="../random" class="drawer-menu-item">Random</a></li> -->
+          <li><a href="../blog" class="drawer-menu-item active">Blog</a></li>
+          <li><a href="../docs/resume.pdf" class="drawer-menu-item">Resume</a></li>
         </ul>
       </nav>
     </header>
@@ -57,19 +59,28 @@
     <!-- This is your content -->
     <main role="main">
       <div class="wrapper" id="content">
+        <h2>desserts recipes</h2>
 
         <section>
-          <!-- <time datetime="2023-2-23">Feb 23rd, 2023</time> -->
-          <h1>welcome to my secret recipe page where I keep some of my favorite recipes just for ･ﾟ✧me✧ﾟ</h1>
-          <ul id="big_list">
-            <li><a href="food/texmex.html">mexican / tex mex / pre-hispanic</a></li>
-            <li><a href="food/lebanese.html">lebanese / mediterranean</a></li>
-            <li><a href="food/asian.html">asian</a></li>
-            <li><a href="food/southern.html">southern</a></li>
-            <li><a href="food/desserts.html">desserts</a></li>
-            <li><a href="food/fusion.html">fusion / other</a></li>
-          </ul>
+          <!-- <time datetime="2023-3-8">March 8th, 2023</time> -->
+          <h2>Flan</h2>
+          <p>!!!!!</p>
+          <a href="flan.html" class="button">recipe</a>
         </section>
+
+
+        <section>
+          <!-- <time datetime="2023-3-8">March 8th, 2023</time> -->
+          <h2>Fennel Molasses Cookies</h2>
+          <p>I'm getting a fennel bulb tattoo for a reason</p>
+          <a href="fennel_molasses_cookies.html" class="button">recipe</a>
+        </section>
+
+        <footer>
+          Back to <em><a href="../food.html" class="external">all recipes</a></em>
+        </footer>
+
+      </div>
       </div>
     </main>
   </body>
