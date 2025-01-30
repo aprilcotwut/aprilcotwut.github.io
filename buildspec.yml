@@ -21,6 +21,6 @@ post_build:
     - echo "deploying to S3..."
     - aws s3 sync . s3://aprilwalker.io/ --delete --exclude ".git/*" --exclude "buildspec.yml"
     - echo "Fixing Content-Type for specific files..."
-    - aws s3 cp blog s3://aprilwalker.io/blog --content-type "text/html"
-    - aws s3 cp research s3://aprilwalker.io/research --content-type "text/html"
+    - aws s3 cp blog s3://aprilwalker.io/blog --content-type "text/html" --metadata-directive REPLACE
+    - aws s3 cp research s3://aprilwalker.io/research --content-type "text/html" --metadata-directive REPLACE
     - echo "deployment complete!"
