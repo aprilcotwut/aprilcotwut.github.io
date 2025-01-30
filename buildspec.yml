@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: latest
+  pre_build:
+    commands:
+      - echo "preping for deployment..."
+  build:
+    commands:
+      - echo "no build step needed..."
+
+artifacts:
+  files:
+    - '**/*'  # Includes all files in the root of the repo
+  discard-paths: no
+
+post_build:
+  commands:
+    - echo "deploying to S3..."
+    - aws s3 sync . s3://aprilwalker.io/ --delete --exclude ".git/*" --exclude "buildspec.yml"
+    - echo "Fixing Content-Type for specific files..."
+    - aws s3 cp blog s3://aprilwalker.io/blog --content-type "text/html"
+    - aws s3 cp research s3://aprilwalker.io/research --content-type "text/html"
+    - echo "deployment complete!"
