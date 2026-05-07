@@ -355,3 +355,15 @@ footer {
     display: none
   }
 }
+
+.post-tag {
+  font-size: 0.6em;
+  vertical-align: middle;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-family: 'Cutive Mono', monospace;
+}
+.post-tag.blog    { background: #e1ffe1; color: #0d875d; }
+.post-tag.article { background: #ffdecd; color: #d85b21; }
+.post-tag.game    { background: #f1e4ff; color: #643f8d; }
+.post-tag.food    { background: #f0fbd3; color: #88b600; }
